@@ -63,6 +63,7 @@
             <form action="procesar_formulario.php" method="post">
                 <!--Con <fieldset> agrupamos los elementos del formulario y con <legend> damos un título al grupo-->
                 <!--Creamos un primer contenedor para los dos primeros fieldsets-->
+                <br>
                 <div id="primer_contenedor">
                     <fieldset>
                         <legend>1. Identificación Fiscal de la Empresa</legend>
@@ -178,11 +179,14 @@
                     </fieldset>
                 </div>
                 <br>
-                <!--Con <button> creamos botones que pueden ser de diferentes tipos (submit, reset)-->
-                <!--Submit envía el formulario al servidor-->
-                <button type="submit">Tramitar Alta al Proveedor</button>
-                <!--Reset borra los datos ingresados en el formulario-->
-                <button type="reset">Restablecer Datos</button>
+                <!--Agregamos un tercer div que agrupe los botones-->
+                <div id="tercer_contenedor">
+                    <!--Con <button> creamos botones que pueden ser de diferentes tipos (submit, reset)-->
+                    <!--Submit envía el formulario al servidor-->
+                    <button type="submit">Tramitar Alta al Proveedor</button>
+                    <!--Reset borra los datos ingresados en el formulario-->
+                    <button type="reset">Restablecer Datos</button>
+                </div>
                 <br><br>
             </form>
         <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
@@ -288,7 +292,9 @@ agregamos la etiqueta <style> a partir de este punto.-->
             border-radius: 15px;
             padding: 5px;
             font-weight: bold;
-            
+            font-size: large;
+            margin-left: 15px;
+            margin-right: 15px;
         }
 
         /*Añadimos un efecto de transición al botón cuando el cursor se pose sobre éste*/
@@ -296,6 +302,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             background-color: #2d3748;
             color: #d3edf7;
             transition: 0.3s;
+            font-size: larger;
         }
 
     /*
@@ -322,6 +329,13 @@ agregamos la etiqueta <style> a partir de este punto.-->
         width: 35%;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    #tercer_contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
 

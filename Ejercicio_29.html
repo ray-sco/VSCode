@@ -1,0 +1,413 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 29                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!--Usamos <!DOCTYPE> para declarar el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Abrimos la etiqueta <html> y especificamos el lenguaje en español-->
+<html lang="es">
+
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--Usamos la etiqueta <head> para almacenar los metadatos y título de la página-->
+<head>
+    <!--En la etiqueta <meta> especificamos la codificación de caracteres. UTF-8 incluye caracteres en español-->
+    <meta charset="UTF-8">
+    <!--Con <title> especificamos el título que se mostrará en la pestaña de la página web-->
+    <title>Cloud Host - Raymond J. Escobar G.</title>
+</head>
+
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--La etiqueta <body> es donde estará la mayor parte del contenido que se mostrará al usuario-->
+<body>
+    <!--    
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <header> agregamos el encabezado de nuestra web-->
+    <header>
+        <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos en orden jerárquico-->
+        <h1>CloudHost ES</h1>
+        <!--Añadimos enlaces con <a>-->
+        <nav>
+            <ul>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#novedades">Novedades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <main> incuiremos el contenido principal de la página-->
+    <main>
+        <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <section id="planes" class="fila-planes">
+            <article class="tarjeta-lateral">
+                <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos. A medida que se incremente el número, el <h> destaca menos-->
+                <h2>Plan Básico</h2>
+                <p class="precio">9€ / mes</p>
+                <ul>
+                    <li>1 Sitio Web</li>
+                    <li>10 GB de Almacenamiento</li>
+                    <li>Soporte por correo</li>
+                </ul>
+                <button type="submit">Elegir Básico</button>
+            </article>
+
+            <article class="tarjeta-destacada">
+                <h2>Plan Pro (Recomendado)</h2>
+                <p class="precio">19€ / mes</p>
+                <ul>
+                    <li>Sitios Web ilimitados</li>
+                    <li>150 GB de Almacenamiento SSD</li>
+                    <li>Dominio gratis durante 1 año</li>
+                    <li>Copias de seguridad diarias</li>
+                    <li>Soporte prioritario 24/7</li>
+                </ul>
+                <button type="submit">Contratar Plan Pro</button>
+            </article>
+
+            <article class="tarjeta-lateral">
+                <h2>Plan Empresa</h2>
+                <p class="precio">49€ / mes</p>
+                <ul>
+                    <li>Servidor dedicado</li>
+                    <li>500 GB de Almacenamiento</li>
+                    <li>IP fija exclusiva</li>
+                </ul>
+                <button type="submit">Elegir Empresa</button>
+            </article>
+        </section>
+
+        <section id="novedades" class="fila-inferior">
+            <div class="columna-doble">
+                <div class="caja-destacada-mini">
+                    <h3>Novedad: Servidores en Madrid</h3>
+                    <p>Todos nuestros planes ya cuentan con alojamiento en territorio nacional para máxima velocidad.</p>
+                </div>
+                <div class="caja-info">
+                    <h3>Migración gratuita</h3>
+                    <p>Trae tu página web desde otro proveedor y nuestro equipo técnico la traslada sin costes de servicio.</p>
+                </div>
+            </div>
+            <div class="columna-triple">
+                <div class="caja-info">
+                    <h3>¿Puedo cambiar de plan?</h3>
+                    <p>Sí, puedes subir o bajar de tarifa en cualquier momento desde tu panel.</p>
+                </div>
+                <div class="caja-info">
+                    <h3>¿Hay permanencia?</h3>
+                    <p>Ninguna. Todos los contratos son mensuales y se cancelan con un clic.</p>
+                </div>
+                <div class="caja-destacada-mini">
+                    <h3>Garantía de 30 días</h3>
+                    <p>Si no quedas satisfecho durante el primer mes, te devolvemos el importe íntegro.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+<!--
+╔═══════════════════════╗
+║        FOOTER         ║
+╚═══════════════════════╝
+-->
+    <!--El pie de página de la web estará contenido en el footer-->
+    <footer>
+        <!--Finalizamos agregando el pie de página como un párrafo-->
+        <br>
+        <p>CloudHost ES &copy; 2026 - Por Raymond Escobar. Todos los derechos reservados.</p>
+        <br>
+    </footer>
+
+<!--Para personalizar el formato y aspecto visual de nuestro HTML,
+agregamos la etiqueta <style> a partir de este punto.-->
+<!--
+╔═══════════════════════╗
+║         STYLE         ║
+╚═══════════════════════╝
+-->
+    <style>
+    /* En CSS los comentarios se crean con barra lateral, asterisco, y terminan con asterisco, barra lateral */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F1F2F6;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1E3799;
+            color: white;
+            margin: 10px;
+            border-radius: 15px;
+            border: 2px solid darkblue;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        h1 {
+            font-size: larger;
+        }
+
+        nav ul li, a {
+            list-style-type: none;
+            margin: 5px;
+            padding: 8px;
+            background-color: #FA983A;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #1E3799;
+            font-size: small;
+        }
+
+        .fila-planes {
+            background-color: #DFF9FB;
+            border-radius: 15px;
+            margin: 10px;
+            border: 2px solid #4A69BD;
+            height: 380px;
+            margin-bottom: 25px;
+        }
+
+        .tarjeta-lateral {
+            background-color: white;
+            border-radius: 15px;
+            margin: 15px;
+            border: 2px solid #4A69BD;
+            font-size: small;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .tarjeta-lateral ul {
+            padding-left: 25px;
+            line-height: 2;
+        }
+
+        .tarjeta-lateral h2 {
+            text-align: center;
+            font-size: medium;
+            color: #1E3799;
+        }
+
+        .tarjeta-lateral .precio {
+            text-align: center;
+            font-size: medium;
+            color: #1E3799;
+            font-weight: bold;
+            border: 1px solid #1E3799;
+            border-radius: 5px;
+            margin: 0px 10px;
+            background-color: #E8ECF8;
+            padding: 5px;
+        }
+
+        .tarjeta-lateral button {
+            display: block;
+            margin: 0px auto;
+            background-color: #4A69BD;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px 15px;
+        }
+
+        .tarjeta-destacada {
+            background-color: #1E3799;
+            border-radius: 15px;
+            margin: 15px;
+            border: 2px solid #0C2461;
+            font-size: small;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .tarjeta-destacada h2 {
+            text-align: center;
+            font-size: medium;
+            color: #FA983A;
+        }
+
+        .tarjeta-destacada ul {
+            padding-left: 25px;
+            line-height: 2;
+        }
+
+        .tarjeta-destacada .precio {
+            text-align: center;
+            font-size: medium;
+            color: #FA983A;
+            font-weight: bold;
+            border: 1px solid #FA983A;
+            border-radius: 5px;
+            margin: 10px;
+            background-color: #0C2461;
+            padding: 5px;
+        }
+
+        .tarjeta-destacada button {
+            display: block;
+            margin: 10px auto;
+            padding: 5px;
+            background-color: #FA983A;
+            color: #1E3799;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 8px 15px;
+        }
+
+        .fila-inferior {
+            height: 360px;
+            margin-bottom: 25px;
+            background-color: #E8ECF8;
+            border-radius: 15px;
+            margin: 10px;
+            border: 2px solid #1E3799;
+        }
+
+        .columna-doble, .columna-triple{
+            background-color: white;
+            border-radius: 15px;
+            margin: 15px;
+            border: 2px solid #4A69BD;
+        }
+
+        .columna-doble h3, .columna-triple h3{
+            margin-bottom: 0;
+            font-size: small;
+        }
+        .columna-doble p, .columna-triple p{
+            margin-top: 0;
+            font-size: small;
+            color: black;
+        }
+
+        .caja-info {
+            background-color: #DFF9FB;
+            border-radius: 15px;
+            margin: 15px;
+            color: #1E3799;
+            border-left: 5px solid #1E3799;
+            padding: 10px;
+        }
+
+        .caja-destacada-mini {
+            background-color: #FFF5EA;
+            border-radius: 15px;
+            margin: 15px;
+            color: #FA983A;
+            border-left: 5px solid #FA983A;
+            padding: 10px;
+        }
+
+        footer {
+            margin-bottom: 25px;
+            background-color: #1E3799;
+            border-radius: 10px;
+            margin: 10px;
+            color: white;
+            font-size: small;
+            padding: 15px;
+        }
+
+    /*
+    ╔═══════════════════════╗
+    ║        FLEXBOX        ║
+    ╚═══════════════════════╝
+    */
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .fila-planes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .tarjeta-lateral {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            width: 0;
+        }
+
+        .tarjeta-destacada {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 2;
+            width: 0;
+        }
+
+        .fila-inferior {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .columna-doble {
+            flex-grow: 1;
+            width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .columna-triple {
+            flex-grow: 1;
+            width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+<!--Una vez completo el cuerpo de nuestra web, cerramos la etiqueta de <body>-->
+</body>
+<!--Finalizamos con el cierre del documento HTML-->
+</html>
