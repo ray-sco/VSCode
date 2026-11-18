@@ -1,0 +1,181 @@
+<!--DOCTYPE declara el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Iniciamos el documento con la etiqueta <html> y especificamos el idioma español-->
+<html lang="es">
+
+    <!--La cabeza del documento contiene los metadatos y el título de la página-->
+    <head>
+        <!--Con meta establecemos el conjunto de caracteres-->
+        <meta charset="UTF-8">
+        <!--Con title establecemos el título de la página-->
+        <title>"Web con style"</title>
+    </head>
+
+    <body>
+        <!--Encabezado de la web-->
+        <header>
+            <!--El h1 será nuestro título principal de la web-->
+            <h1 id="titulo_principal">Fauna salvaje del Amazonas</h1>
+            <!--Nav contendrá los enlaces a las diferentes secciones de la web-->
+            <nav>
+                <!--Añadimos una lista desordenada de enlaces-->
+                <ul>
+                    <!--Se añaden enlaces de tipo ancla, a secciones de la misma web-->
+                    <li><a href="#jaguar">El Jaguar</a></li>
+                    <li><a href="#anaconda">La Anaconda</a></li>
+                    <li><a href="#guacamaya">La Guacamaya</a></li>
+                    <li><a href="#pirana">La Piraña</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Con hr añadimos una línea horizontal de separación-->
+        <hr>
+        <!--El main contendrá el contenido principal de la web-->
+        <main>
+            <!--Agregamos una sección para cada animal-->
+            <section>
+                <!--En h2 creamos el subtítulo y nombramos a cada animal-->
+                <h2 id="jaguar">El Jaguar</h2>
+                <!--Insertamos un párrafo con información sobre el jaguar-->
+                <p>El jaguar es un felino que habita en América del Sur y Central. Es conocido por su fuerza y agilidad, y es un depredador tope en su ecosistema.</p>
+                <!--En figure, encapsulamos la imagen y el pie de imagen-->
+                <figure>
+                    <img src="img/jaguar.jpg" alt="Imagen de un jaguar" width="300">
+                    <figcaption>Un jaguar en su hábitat natural</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2 id="anaconda">La Anaconda</h2>
+                <p>La anaconda es una de las serpientes más grandes del mundo y se encuentra en los ríos y pantanos del Amazonas. Es conocida por su capacidad para nadar y cazar en el agua.</p>
+                <figure>
+                    <img src="img/anaconda.jpg" alt="Imagen de una anaconda" width="300">
+                    <figcaption>Una anaconda reptando por el suelo</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2 id="guacamaya">La Guacamaya</h2>
+                <p>La guacamaya es un ave colorida que habita en las selvas tropicales del Amazonas. Es conocida por su inteligencia y su capacidad para imitar sonidos.</p>
+                <figure>
+                    <img src="img/guacamaya.jpg" alt="Imagen de una guacamaya" width="300">
+                    <figcaption>Una guacamaya posada en una rama</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2 id="pirana">La Piraña</h2>
+                <p>La piraña es un pez carnívoro que habita en los ríos del Amazonas. Es conocida por su voracidad y su capacidad para cazar en grupo.</p>
+                <figure>
+                    <img src="img/pirana.jpg" alt="Imagen de una piraña" width="300">
+                    <figcaption>Una piraña nadando en el río</figcaption>
+                </figure>
+            </section>
+            <hr>
+            <!--Agregamos una sección con una tabla de población de animales-->
+            <section>
+                <!--Usamos una tabla para mostrar la información-->
+                <table>
+                    <!--Con caption agregamos un título a la tabla-->
+                    <caption>Población de animales en el Amazonas</caption>
+                    <!--thead define el encabezado de la tabla-->
+                    <thead>
+                        <!--tr define una fila ("row") de la tabla-->
+                        <tr>
+                            <!--th define una celda de encabezado, cada th representa una columna-->
+                            <th>Animal</th>
+                            <th>Población estimada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="animal">Jaguar</td>
+                            <td>15,000</td>
+                        </tr>
+                        <tr>
+                            <td class="animal">Anaconda</td>
+                            <td>5,000</td>
+                        </tr>
+                        <tr>
+                            <td class="animal">Guacamaya</td>
+                            <td>10,000</td>
+                        </tr>
+                        <tr>
+                            <td class="animal">Piraña</td>
+                            <td>50,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <hr>
+        <!--Pie de página de la web-->
+        <footer>
+        Copyright © 2026 Fauna del Amazonas por Raymond J. Escobar G. Todos los derechos reservados.
+        </footer>
+    </body>
+    </html>
+
+    <!--Con style añadimos estilos CSS a la web. Es recomendable colocarla después de finalizar la etiqueta HTML-->
+    <style>
+        html {
+            font-family: Arial, sans-serif;
+            background-image: url("img/fondo.jpg");
+        }
+
+        nav {
+            background-color: rgba(211, 211, 211, 0.800);
+        }
+
+        h1, h2 {
+            font-family: fantasy;
+        }
+
+        h1 {
+            color: lightgrey;
+            text-align: center;
+        }
+
+        h2 {
+            color: darkgreen;
+        }
+
+        section {
+            padding: 20px;
+            margin: 50px;
+            background-color: rgba(211, 211, 211, 0.8);
+            border: 2px solid darkgrey;
+            text-align: justify;
+            border-radius: 20px;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figcaption {
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        table, thead, tbody, th, td, tr {
+            text-align: center;
+            width: 50%;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        thead {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .animal {
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background-color: darkgreen;
+        }
+
+    </style>

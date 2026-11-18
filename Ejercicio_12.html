@@ -1,0 +1,175 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 12                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!--Usamos <!DOCTYPE> para declarar el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Abrimos la etiqueta <html> y especificamos el lenguaje en español-->
+<html lang="es">
+
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--Usamos la etiqueta <head> para almacenar los metadatos y título de la página-->
+<head>
+    <!--En la etiqueta <meta> especificamos la codificación de caracteres. UTF-8 incluye caracteres en español-->
+    <meta charset="UTF-8">
+    <!--Con <title> especificamos el título que se mostrará en la pestaña de la página web-->
+    <title>Refugio de Animales "Huellas Felices" - Raymond J. Escobar G.</title>
+</head>
+
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--La etiqueta <body> es donde estará la mayor parte del contenido que se mostrará al usuario-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <header> agregamos el encabezado de nuestra web-->
+    <header>
+        <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos en orden jerárquico-->
+        <h1>Refugio de Animales Huellas Felices</h1>
+        <!--Podemos añadir párrafos con la etiqueta <p>-->
+        <p>Adopta un amigo y dale una segunda oportunidad a un peludo.</p>
+        <!--La etiqueta <nav> agrupa un bloque de enlaces-->
+        <nav>
+            <!--con <ul> agregamos una lista no ordenada-->
+            <ul>
+                <!--<li> nos permite agregar elementos o items a la lista-->
+                <!--la etiqueta <a> añade un enlace y se usa con el atributo href para especificar la ruta-->
+                <li><a href="#adopcion">En adopción</a></li>
+                <li><a href="#proceso">Cómo Adoptar</a></li>
+                <li><a href="#filosofia">Nuestra Filosofía</a></li>
+                <!--Los enlaces anteriores hacen referencia a partes dentro del mismo HTML, por lo que son de tipo relativo-->
+            </ul>
+        </nav>
+    </header>
+    <!--Usamos <hr> para agregar una línea divisoria horizontal que separa la cabecera del main-->
+    <hr>
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <main> incuiremos el contenido principal de la página-->
+    <main>
+        <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <section id="adopcion">
+            <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos. A medida que se incremente el número, el <h> destaca menos-->
+            <h2>Nuestros Residentes en Adopción</h2>
+            <!--La etiqueta <article> envuelve un contenido independiente o autónomo-->
+            <article>
+                <h3>Luna - Mestiza de 2 años</h3>
+                <h4>Carácter juguetón y muy cariñosa</h4>
+                <!--Usamos <figure> como caja contenedora de un elemento multimedia, como fotos o vídeos-->
+                <figure>
+                    <!--Con <img> agregamos imágenes, se acompañan de los atributos "src" para indicar la ruta y "alt" para colocar un texto descriptivo-->
+                        <img src="https://i.ibb.co/jSG54YW/luna.png" alt="Foto de Luna">
+                        <!--Para agregar una leyenda al pie de foto se usa la etiqueta <figcaption>-->
+                        <figcaption>Figura 1: Luna en el área de juegos del refugio.</figcaption>
+                </figure> 
+                <!--Añadimos nuevos párrafos usando <p>-->
+                <p> Luna llegó al refugio en marzo de 2026. Es una perra 
+                    <!--Con <strong> ponemos el texto en negrita-->
+                    <strong>muy sociable</strong> 
+                    con otros perros y niños, ideal para familias activas. Se entrega con vacunación al día y 
+                    <!--Resaltamos el texto con la etiqueta <mark>-->
+                    <mark>chip identificativo</mark>.
+                </p>
+            <!--Procedemos a cerrar el artículo-->
+            </article>
+            <!--Abrimos un nuevo <article> para añadir más animales en adopción-->
+            <article>
+                <!--Nuevamente creamos subtítulos con <h3> y <h4>-->
+                <h3>Simba - Gato Común de 1 año</h3>
+                <h4>Tranquilo y observador</h4>
+                <!--Creamos un nuevo contenedor de imagen con <figure>-->
+                <figure>
+                    <!--Usamos <img> para añadir la imagen de nuestro gato en adopción-->
+                    <img src="https://i.ibb.co/k6kxYMvF/simba.png" alt="Foto de Simba">                   
+                    <!--Para agregar una leyenda al pie de foto se usa la etiqueta <figcaption>-->
+                    <figcaption>Figura 2: Simba descansando en su espacio en el refugio.</figcaption>
+                </figure>
+                <!--Añadimos nuevos párrafos usando <p>-->
+                <p> Simba fue rescatado en la calle. Es un gato  
+                    <!--Con <em> enfatizamos el texto-->
+                    <em>muy mimoso</em> 
+                    al que le encanta estar en regazos calientes. Requiere una casa con
+                    <!--Resaltamos el texto con la etiqueta <mark>-->
+                    <mark>protecciones en ventanas</mark>.
+                </p>
+            <!--Procedemos a cerrar el artículo-->
+            </article>
+        <!--Y cerramos también la sección de animales "En adopción"-->
+        </section>
+        <!--Usamos <hr> para agregar una línea divisoria horizontal entre secciones-->
+        <hr>
+        <!--Abrimos una nueva sección y le añadimos el atributo "id" para asociarlo al contenido de "Cómo adoptar"-->
+        <section id="proceso">
+            <!--Nuevamente creamos un subtítulo con <h2>-->
+            <h2>Pasos para la Adopción Responsable</h2>
+            <!--Añadimos un párrafo explicativo-->
+            <p>Sigue estas etapas para completar el proceso de adopción:</p>
+            <!--Usamos <ol> para añadir una lista con elementos <li> en orden numérico-->
+            <ol>
+                <li><strong>Solicitud:</strong> Rellena la ficha con tus datos e intereses.</li>
+                <li><strong>Entrevista:</strong> Charla previa para conocer el entorno donde vivirá el animal.</li>
+                <li><strong>Visita:</strong> Ven a conocer al perro o gato para ver la afinidad.</li>
+                <li><strong>Firma:</strong> Firma del contrato de adopción y entrega del animal.</li>
+                <!--Nótese que previamente usamos <strong> para agregar negritas al título de cada elemento-->
+            <!--Cerramos la etiqueta de lista ordenada y la sección-->
+            </ol>
+        </section>
+        <!--Usamos un nuevo <hr> dividir secciones-->
+        <hr>
+        <!--Comenzamos con la sección de "filosofia" y le añadimos su respectivo "id"-->
+        <section id="filosofia">
+            <!--Ponemos el subtítulo de la sección-->
+            <h2>Compromiso con la Protección Animal</h2>
+            <!--Con blockquote añadimos un bloque para agregar citas textuales extensas-->
+            <blockquote>
+            "Hasta que no has amado a un animal, una parte de tu alma permanece dormida."
+            <!--Con <br> forzamos un salto de línea-->
+            <br>
+            <!--Referimos al autor del texto con la etiqueta <cite>-->
+            <cite>— Anatole France</cite>
+            <!--Cerramos el bloque de citas-->
+            </blockquote>
+            <!--Añadimos el último párrafo del cuerpo del HTML-->
+            <p>  Puedes consultar más información sobre
+                la ley de bienestar animal en el sitio oficial del 
+                <!--Con la etiqueta <a> añadimos un enlace a una web externa-->
+                <a href="https://www.boe.es/">Boletín Oficial del Estado</a>
+            </p>
+        <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
+        </section>
+    </main>
+    <!--Nos valemos del <hr> para crear la línea divisoria entre el <main> y el <footer>-->
+    <hr>
+    <!--
+╔═══════════════════════╗
+║        FOOTER         ║
+╚═══════════════════════╝
+-->
+    <!--El pie de página de la web estará contenido en el footer-->
+    <footer>
+        <!--Finalizamos agregando el pie de página como un párrafo-->
+        <p>© 2026 Refugio Huellas Felices. Todos los derechos reservados.</p>
+    </footer>
+<!--Una vez completo el cuerpo de nuestra web, cerramos la etiqueta de <body>-->
+</body>
+<!--Culminamos con el cierre del documento HTML-->
+</html>

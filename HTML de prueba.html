@@ -1,0 +1,134 @@
+<!--DOCTYPE declara el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Iniciamos el documento con la etiqueta <html> y especificamos el idioma español-->
+<html lang="es">
+
+<!--La cabeza del documento contiene los metadatos y el título de la página-->
+<head>
+    <meta charset="UTF-8">
+    <title>"Primera Página Web"</title>
+</head>
+
+<body>
+    <header>
+    <!--Encabezado de la web-->
+    </header>
+    <main>
+        <!--Prueba de títulos y subtítulos-->    
+        <h1 id="titulo_principal">Este es un título h1</h1>
+        <h2>Este es un título h2</h2>
+        <h3>Este es un título h3</h3>
+
+        <!--Estructura recomendada en todos los HTML-->            
+        <div></div> <!--Es muy genérico, NO se recomienda su uso habitual-->
+
+        <nav></nav> <!--Contiene las listas de navegación-->
+
+        <section>   <!--Agrupa el contenido por bloques lógicos-->
+            Bloque o sección de contenido
+        </section>
+
+        <article> <!--Representa un contenido independiente-->
+            Artículo independiente
+        </article>
+
+        <aside> <!--Se usa como barra lateral-->
+            Barra lateral
+        </aside>
+
+        <section>
+            <p>Este es un párrafo de prueba</p>
+            <!--Enlace interno o ancla-->
+            <a href="#titulo_principal">Ir al título h1</a>
+            <br>
+            <!--Enlace relativo-->
+            <a href="/index.html">Ir a la página principal</a>
+            <br>
+            <!--Enlace absoluto-->
+            <a href="http://www.google.es">Ir a Google</a>
+            <br><br>
+        </section>
+        <!--Sección de texto con formato especial-->
+        <section>
+            <del>Este texto ha sido eliminado</del><!--Marca el texto como eliminado-->
+            <br><br>
+            <ins>Este texto ha sido insertado</ins><!--Marca el texto como insertado-->
+            <br><br>
+            <cite>"Este texto es una cita"</cite><!--Marca el texto como una cita-->
+            <br><br>
+            <time datetime="2026-09-30">30 de septiembre de 2026</time>
+            <p>Texto de prueba</p>
+            <hr> <!--Línea horizontal-->
+            <p>Texto de prueba</p>
+            <br>
+            <p>Texto de prueba <br><!--Salto de línea-->con salto de línea</p>
+            <blockquote cite="https://www.google.es">Este es un bloque de cita</blockquote> 
+            <pre> <!--Inserta texto manteniendo el formato del código fuente-->
+            Este es   un bloque
+                de texto 
+            preformateado
+            </pre>
+        </section>
+        <!--Sección para probar listas-->
+        <section>
+            <p>Lista desordenada:</p>
+            <ul>
+                <li>Primer ítem</li>
+                <li>Segundo ítem</li>
+                <li>Tercer ítem</li>
+            </ul>
+            <p>Lista ordenada</p>
+            <ol>
+                <li>Ordenado 1</li>
+                <li>Ordenado 2</li>
+                <li>Ordenado 3</li>
+            </ol>
+            <p>Lista de definición</p>
+            <dl>
+                <dt>Cuadrado</dt>
+                <dd>Figura geométrica con <br>cuatro lados iguales</dd>
+                <dt>Hexágono</dt>
+                <dd>Figura geométrica con <br>seis lados iguales</dd>
+            </dl>
+        </section>
+        <section>
+            <p>Sección de pruebas multimedia</p>
+            <figure>
+                <img src="img/snoopy.jpg" alt="Imagen de Snoopy" width="120px" height="105px">
+                <figcaption>Snoopy pintando sobre lienzo</figcaption>
+            </figure>
+        </section>
+        <section>
+            <p>Creación de tablas</p>
+            <table border="1">
+                <caption>Tabla de prueba</caption>
+                <thead>
+                    <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                        <th>Columna 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Col 1, Fila 1</td>
+                        <td>Col 2, Fila 1</td>
+                        <td>Col 3, Fila 1</td>
+                    </tr>
+                    <tr>
+                        <td>Col 1, Fila 2</td>
+                        <td>Col 2, Fila 2</td>
+                        <td>Col 3, Fila 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+    <!--Pie de página de la web-->
+    </footer>
+</body>
+
+</html>
+
+

@@ -1,0 +1,183 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 19                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!--Usamos <!DOCTYPE> para declarar el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Abrimos la etiqueta <html> y especificamos el lenguaje en español-->
+<html lang="es">
+
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--Usamos la etiqueta <head> para almacenar los metadatos y título de la página-->
+<head>
+    <!--En la etiqueta <meta> especificamos la codificación de caracteres. UTF-8 incluye caracteres en español-->
+    <meta charset="UTF-8">
+    <!--Con <title> especificamos el título que se mostrará en la pestaña de la página web-->
+    <title>Inscripción a Taller de Robótica - Raymond J. Escobar G.</title>
+</head>
+
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--La etiqueta <body> es donde estará la mayor parte del contenido que se mostrará al usuario-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <header> agregamos el encabezado de nuestra web-->
+    <header>
+        <br>
+        <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos en orden jerárquico-->
+        <h1>Formulario de Inscripción al Taller</h1>
+        <!--Podemos añadir párrafos con la etiqueta <p>-->
+        <p>Complete sus datos para solicitar plaza en el Taller de Robótica 2026</p>
+        <br>
+    </header>
+    <!--Usamos <hr> para agregar una línea divisoria horizontal que separa la cabecera del main-->
+    <hr>
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <main> incuiremos el contenido principal de la página-->
+    <main>
+        <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <section id="formulario">
+            <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos. A medida que se incremente el número, el <h> destaca menos-->
+            <form action="procesar_formulario.php" method="post">
+                <fieldset>
+                    <legend>Datos de Inscripción del Alumno</legend>
+                    <br>
+                    <label for="nombre">Nombre y Apellidos (Obligatorio):</label>
+                    <br>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ejemplo: Juan Pérez">
+                    <br><br>
+                    <label for="correo">Correo electrónico personal (Obligatorio):</label>
+                    <br>
+                    <input type="email" id="correo" name="correo" required placeholder="Ejemplo: usuario@correo.com">
+                    <br><br>
+                    <label for="telefono">Teléfono móvil de contacto:</label>
+                    <br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: 611223344">
+                    <br><br>
+                    <label for="fecha">Fecha preferida para el taller (dd/mm/aaaa):</label>
+                    <br>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <br><br>
+                </fieldset>
+                <br>
+                <button type="submit">Reservar Plaza</button>
+                <button type="reset">Borrar Formulario</button>
+                <br><br>
+            </form>
+        <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
+        </section>
+    </main>
+    <!--Nos valemos del <hr> para crear la línea divisoria entre el <main> y el <footer>-->
+    <hr>
+<!--
+╔═══════════════════════╗
+║        FOOTER         ║
+╚═══════════════════════╝
+-->
+    <!--El pie de página de la web estará contenido en el footer-->
+    <footer>
+        <!--Finalizamos agregando el pie de página como un párrafo-->
+        <br>
+        <p>&copy; 2026 Material Docente de Lenguaje de Marcas. Ejercicio Práctico de Formularios. Por Raymond Escobar</p>
+        <br>
+    </footer>
+
+<!--Para personalizar el formato y aspecto visual de nuestro HTML,
+agregamos la etiqueta <style> a partir de este punto.-->
+<!--
+╔═══════════════════════╗
+║         STYLE         ║
+╚═══════════════════════╝
+-->
+    <style>
+    /* En CSS los comentarios se crean con barra lateral, asterisco, y terminan con asterisco, barra lateral */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            font-family: 'Gill Sans', Calibri, sans-serif;
+            text-align: center;
+            background-color: #084740;
+            color: #bcf3eb;
+        }
+
+        header p {
+            color: whitesmoke;
+        }
+
+        footer {
+            background-color: #084740;
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', Calibri, sans-serif;
+        }
+
+        form {
+            margin: 30px;
+            background-color: #e6f3f1;
+            border-radius: 15px;
+            border: 2px white double;
+        }
+
+        legend {
+            background-color: #084740;
+            color: #bcf3eb;
+            font-size: large;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 10px;          
+        }
+
+        fieldset {
+            border: 2px #084740 solid;
+            border-radius: 15px;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 2px;
+            width: 25%;
+            font-size: medium;
+        }
+
+        label {
+            font-weight: bold;
+            color: #084740;
+        }
+
+        hr {
+            color: #bcf3eb;
+        }
+        
+        button {
+            border-radius: 15px;
+            padding: 5px;
+            font-weight: bold;
+        }
+    </style>
+<!--Una vez completo el cuerpo de nuestra web, cerramos la etiqueta de <body>-->
+</body>
+<!--Finalizamos con el cierre del documento HTML-->
+</html>

@@ -1,0 +1,297 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 19                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!--Usamos <!DOCTYPE> para declarar el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Abrimos la etiqueta <html> y especificamos el lenguaje en español-->
+<html lang="es">
+
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--Usamos la etiqueta <head> para almacenar los metadatos y título de la página-->
+<head>
+    <!--En la etiqueta <meta> especificamos la codificación de caracteres. UTF-8 incluye caracteres en español-->
+    <meta charset="UTF-8">
+    <!--Con <title> especificamos el título que se mostrará en la pestaña de la página web-->
+    <title>Formulario Completo de Alta de Proveedor - Raymond J. Escobar G.</title>
+</head>
+
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--La etiqueta <body> es donde estará la mayor parte del contenido que se mostrará al usuario-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <header> agregamos el encabezado de nuestra web-->
+    <header>
+        <br>
+        <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos en orden jerárquico-->
+        <h1>Formulario de Alta y Registro de Proveedores</h1>
+        <!--Podemos añadir párrafos con la etiqueta <p>-->
+        <p>Ejemplo integral de formularios HTML5 para la homologación de empresas suministradoras</p>
+        <br>
+    </header>
+    <!--Usamos <hr> para agregar una línea divisoria horizontal que separa la cabecera del main-->
+    <hr>
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <main> incuiremos el contenido principal de la página-->
+    <main>
+        <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <section id="formulario">
+            <!--Con la etiqueta <form> creamos un formulario que se enviará al servidor para ser procesado-->
+            <!--Usamos el método POST para enviar los datos del formulario de manera segura (oculta)-->
+            <form action="procesar_formulario.php" method="post">
+                <!--Con <fieldset> agrupamos los elementos del formulario y con <legend> damos un título al grupo-->
+                <fieldset>
+                    <legend>1. Identificación Fiscal de la Empresa</legend>
+                    <br>
+                    <!--Con <label> asociamos un texto a un campo de entrada-->
+                    <label for="busqueda">Buscar registro mercantil previo:</label>
+                    <br>
+                    <!--Un <input> de tipo search nos permite crear campos de entrada de búsqueda-->
+                    <input type="search" id="busqueda" name="busqueda" placeholder="Ingrese razón social o CIF a buscar">
+                    <br><br>
+                    <label for="cif">CIF de la empresa (Obligatorio):</label>
+                    <br>
+                    <!--Un <input> de tipo text nos permite crear campos de entrada de texto-->
+                    <!--El atributo "required" indica que el campo es obligatorio-->
+                    <!--Con el atributo "pattern" definimos un patrón de validación para el campo-->
+                    <input type="text" id="cif" name="cif" required placeholder="B12345678" pattern="[A-Z]{1}[0-9]{8}">
+                    <br><br>
+                    <label for="telefono">Teléfono de la centralita:</label>
+                    <br>
+                    <!--Un <input> de tipo tel nos permite crear un campo de entrada para un número de teléfono-->
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 910001122">
+                    <br><br>
+                    <label for="correo">Correo electrónico para pedidos:</label>
+                    <br>
+                    <!--Con un <input> de tipo email creamos un campo de entrada para el correo electrónico-->
+                    <input type="email" id="correo" name="correo" placeholder="pedidos@proveedor.com">
+                    <br><br>
+                    <label for="web_proveedor">Catálogo digital o sitio web corporativo:</label>
+                    <br>
+                    <!--Un <input> de tipo date nos permite crear seleccionar una fecha-->
+                    <input type="url" id="web_proveedor" name="web_proveedor" placeholder="https://www.proveedor.com">
+                    <br><br>
+                <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                </fieldset>
+                <br>
+                <!--Abrimos un nuevo fieldset, como si fuese una sección adicional-->
+                <fieldset>
+                    <legend>2. Capacidad de Suministro y Condición Comercial</legend>
+                    <br>
+                    <label for="plazo">Plazo mínimo de entrega en días (mínimo 1, máximo 30, saltos de 5):</label>
+                    <br>
+                    <!--Un <input> de tipo number nos permite crear un campo de entrada para un número-->
+                    <!--Podemos especificar valores mínimos, máximos y el paso entre ellos-->
+                    <input type="number" id="plazo" name="plazo" min="1" max="30" step="5" value="5">
+                    <br><br>
+                    <label for="descuento">Descuento aplicado por volumen (€):</label>
+                    <br>
+                    <input type="number" id="descuento" name="descuento" min="0.00" step="0.01" value="0.00">
+                    <br><br>
+                    <label for="capacidad">Capacidad operativa estimada (0% al 100%):</label>
+                    <br>
+                    <!--Con el <input> de tipo range creamos un deslizador para seleccionar un valor-->
+                    <input type="range" id="capacidad" name="capacidad" min="0" max="100" step="1" value="50">
+                    <br><br>
+                    <label for="color">Color de identificación corporativa:</label>
+                    <br>
+                    <!--Un <input> de tipo color nos permite crear un selector de color-->
+                    <input type="color" id="color" name="color" value="#FFFFFF">
+                <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                </fieldset>
+                <br>
+                <!--Abrimos un nuevo fieldset, como si fuese una sección adicional-->
+                <fieldset>
+                    <legend>3. Logística, Horarios de Entrega y Almacén</legend>
+                    <br>
+                    <label for="entrega">Fecha prevista para auditoría de calidad:</label>
+                    <br>
+                    <!--Con el <input> de tipo date creamos un selector de fecha-->
+                    <input type="date" id="entrega" name="entrega">
+                    <br><br>
+                    <label for="hora">Hora límite para recepción de mercancía:</label>
+                    <br>
+                    <!--Con el <input> de tipo time creamos un campo de entrada para seleccionar una hora específica-->
+                    <input type="time" id="hora" name="hora" value="14:00">
+                    <br><br>
+                    <label for="region">Región logística de distribución:</label>
+                    <br>
+                    <!--El <input> de tipo list nos permite asociar un menú desplegable con opciones predefinidas-->
+                    <input type="text" id="region" name="region" list="regiones" placeholder="Seleccione o escriba...">
+                    <!--Usamos <datalist> para definir las opciones del menú desplegable-->
+                    <datalist id="regiones">
+                        <option value="Norte">
+                        <option value="Sur">
+                        <option value="Este">
+                        <option value="Oeste">
+                    </datalist>
+                <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                </fieldset>
+                <br>
+                <!--Abrimos un nuevo fieldset-->
+                <fieldset>
+                    <legend>4. Acreditaciones y Certificados Legales</legend>
+                    <br>
+                    <label for="certificado">Tarifas vigentes y certificado IAE (Excel o PDF):</label>
+                    <br>
+                    <!--El <input> de tipo file nos permite seleccionar archivos para cargar al servidor-->
+                    <input type="file" id="certificado" name="certificado" accept=".xlsx,.xls,.pdf">
+                    <br><br>
+                    <label for="logotipo">Logotipo oficial de la marca (imágenes):</label>
+                    <br>
+                    <!--Con el atributo "accept" se puede especificar el tipo de archivo que se desea cargar-->
+                    <input type="file" id="logotipo" name="logotipo" accept="image/*">
+                    <br><br>
+                    <label for="audio">Instrucciones o locución de bienvenida (audio):</label>
+                    <br>
+                    <input type="file" id="audio" name="audio" accept="audio/*">
+                    <br><br>
+                <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                </fieldset>
+                <br>
+                <!--Con <button> creamos botones que pueden ser de diferentes tipos (submit, reset)-->
+                <!--Submit envía el formulario al servidor-->
+                <button type="submit">Tramitar Alta al Proveedor</button>
+                <!--Reset borra los datos ingresados en el formulario-->
+                <button type="reset">Restablecer Datos</button>
+                <br><br>
+            </form>
+        <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
+        </section>
+    </main>
+    <!--Nos valemos del <hr> para crear la línea divisoria entre el <main> y el <footer>-->
+    <hr>
+<!--
+╔═══════════════════════╗
+║        FOOTER         ║
+╚═══════════════════════╝
+-->
+    <!--El pie de página de la web estará contenido en el footer-->
+    <footer>
+        <!--Finalizamos agregando el pie de página como un párrafo-->
+        <br>
+        <p>&copy; 2026 Material Docente de Lenguaje de Marcas. Módulo de Formularios HTML5. Por Raymond Escobar</p>
+        <br>
+    </footer>
+
+<!--Para personalizar el formato y aspecto visual de nuestro HTML,
+agregamos la etiqueta <style> a partir de este punto.-->
+<!--
+╔═══════════════════════╗
+║         STYLE         ║
+╚═══════════════════════╝
+-->
+    <style>
+    /* En CSS los comentarios se crean con barra lateral, asterisco, y terminan con asterisco, barra lateral */
+
+        /*Establecemos las propiedades generales para el cuerpo del documento*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #bac8d3;
+        }
+
+        /*Personalizamos el encabezado según nuestros gustos*/
+        header {
+            font-family: 'Gill Sans', Calibri, sans-serif;
+            text-align: center;
+            background-color: #2d3748;
+            color: white;
+        }
+
+        /*Cambiamos el color del texto sólo en el párrafo del encabezado*/
+        header p {
+            color: #d3edf7;
+        }
+
+        /*Añadimos estilo al pie de página*/
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', Calibri, sans-serif;
+        }
+
+        /*Modificamos el estilo del formulario*/
+        form {
+            margin: 30px;
+            
+            /*Usamos border-radius para crear esquinas redondeadas*/
+            border-radius: 15px;
+            border: 2px white double;
+        }
+
+        /*Añadimos estilo al legend, fieldset, input y label del formulario, cada elemento por separado*/
+        legend {
+            background-color: #2d3748;
+            color: whitesmoke;
+            /*font-size nos permitirá establecer el tamaño de la fuente*/
+            font-size: large;
+            /*font-weight nos permitirá establecer el grosor de la fuente*/
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 10px;          
+        }
+
+        fieldset {
+            border: 2px #2d3748 solid;
+            border-radius: 15px;
+            background-color: #dff0f7;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 2px;
+            font-size: medium;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        /*Podemos incluso cambiar el color de la línea horizontal*/
+        hr {
+            color: #2d3748;
+        }
+        
+        /*Realizamos cambios en el estilo del botón*/
+        button {
+            border-radius: 15px;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        /*Añadimos un efecto de transición al botón cuando el cursor se pose sobre éste*/
+        button:hover {
+            background-color: #2d3748;
+            color: #d3edf7;
+            transition: 0.3s;
+        }
+    /*Después de formatear la página, cerramos la etiqueta de style*/
+    </style>
+<!--Una vez completo el cuerpo de nuestra web, cerramos la etiqueta de <body>-->
+</body>
+<!--Finalizamos con el cierre del documento HTML-->
+</html>

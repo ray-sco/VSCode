@@ -1,0 +1,405 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 25                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html> <!--Definimos documento como HTML5-->
+<html lang="es"> <!--Establecemos el lenguaje en español-->
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--En head ponemos los metadatos y título-->
+<head>
+    <meta charset="UTF-8"> <!--Seleccionamos la codificación de caracteres-->
+    <title>Plantilla de Evaluación HTML5 y CSS3</title> <!--Indicamos el título de la web-->
+</head>
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--En body ponemos el contenido que el usuario observará-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <header>
+        <!--Con la etiqueta <nav> creamos un apartado para los enlaces-->
+        <nav>
+            <a href="#introduccion">Introducción</a> <!--Usando la etiqueta <a> creamos un enlace interno-->
+            <a href="#glosario">Glosario</a>
+            <a href="#calificaciones">Calificaciones</a>
+            <a href="#registro">Registro</a>
+        </nav>
+        <h1>Plantilla de Evaluación HTML5 y CSS3</h1> <!--Título principal de la página-->
+    </header>
+    <hr> <!--Agregamos una línea divisoria-->
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <main>
+        <!--Añadimos una primera sección-->
+        <section id="introduccion">
+            <!--Usamos las etiquetas <h2>, <h3> y subsiguientes para crear encabezados jerárquicos-->
+            <h2>1. Estructura y Metodología</h2>
+            <h3>Instrucciones del Curso</h3>
+            <p>A continuación se detallan los contenidos evaluables e instrucciones generales:</p>
+
+            <h4>Requisitos generales:</h4>
+            <!--Añadimos una lista no ordenada-->
+            <ul>
+                <li>Uso correcto de etiquetas semánticas HTML5.</li> <!--Cada item de la lista se denomina con <li>-->
+                <li>Aplicación de hojas de estilo CSS externas o internas.</li>
+                <li>Validación adecuada de los campos de formulario.</li>
+            </ul>
+            <!--Añadimos una lista ordenada por números-->
+            <h4>Pasos para la entrega:</h4>
+            <ol>
+                <li>Descargar la plantilla de evaluación.</li>
+                <li>Completar los ejercicios de tablas y formularios</li>
+                <li>Validar el código en el servicio del W3C.</li>
+                <li>Subir el archivo al aula virtual.</li>
+            </ol>
+        </section>
+        <!--Finalizamos una sección e iniciamos una nueva-->
+        <section id="glosario">
+            <h2>2. Glosario Técnico</h2>
+            <p>Conceptos clave para la evaluación teórica:</p>
+            <dl> <!--DL permite añadir listas de definición con sus términos (DT) y detalles (DD)-->
+                <dt><strong>HTML5</strong></dt> <!--Con strong ponemos el texto en negrita-->
+                <dd>Lenguaje de marcado estándar para la estructuración y presentación de contenido en la web.</dd>
+                <dt><strong>CSS3</strong></dt>
+                <dd>Lenguaje de diseño gráfico para definir y estructurar la presentación de un documento estructurado en HTML.</dd>
+                <dt><strong>Etiqueta Semántica</strong></dt>
+                <dd>Elemento HTML que aporta significado claro tanto al desarrollador como al navegador sobre su contenido (ej. nav, section,article).</dd>
+            </dl>
+        </section>
+        <section id="calificaciones">
+            <h2>3. Listado Completo de Alumnos</h2>
+            <table> <!--Con <table> insertamos una tabla de datos-->
+                <caption>Registro Académico y Seguimiento de Calificaciones</caption> <!--Con <caption> añadimos un título a la tabla-->
+                <thead> <!--Encabezado de la tabla-->
+                    <tr> <!--Fila de encabezado-->
+                        <th scope="col" class="encabezado_tabla">ID</th> <!--Las celdas de encabezado se identifican con el atributo scope-->
+                        <th scope="col" class="encabezado_tabla">Alumno</th>
+                        <th scope="col" class="encabezado_tabla">DNI</th>
+                        <th scope="col" class="encabezado_tabla">e-mail</th>
+                        <th scope="col" class="encabezado_tabla">Teoría</th>
+                        <th scope="col" class="encabezado_tabla">Práctica</th>
+                        <th scope="col" class="encabezado_tabla">Asistencia</th>
+                        <th scope="col" class="encabezado_tabla">Estado</th>
+                    </tr>
+                </thead>
+                <tbody> <!--Cuerpo de la tabla-->
+                    <tr> <!--Fila de datos-->
+                        <td class="id">001</td> <!--Con <td> insertamos una celda de datos estándar-->
+                        <td>Juan Pérez</td>
+                        <td>12345678A</td>
+                        <td>juan@email.com</td>
+                        <td>8.5</td>
+                        <td>9.0</td>
+                        <td>95%</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr> <!--Cada <tr> representa una fila en la tabla-->
+                        <td class="id">002</td> 
+                        <td>Maria López</td>
+                        <td>87654321B</td>
+                        <td>maria@email.com</td>
+                        <td>10.0</td>
+                        <td>9.5</td>
+                        <td>100%</td>
+                        <td>Sobresaliente</td>
+                    </tr>
+                    <tr>
+                        <td class="id">003</td>
+                        <td>Carlos Ruiz</td>
+                        <td>11223344C</td>
+                        <td>carlos@email.com</td>
+                        <td>4.5</td>
+                        <td>5.0</td>
+                        <td>80%</td>
+                        <td>Suspenso</td>
+                    </tr>
+                    <tr>
+                        <td class="id">004</td>
+                        <td>Ana Gómez</td>
+                        <td>55667788D</td>
+                        <td>ana@email.com</td>
+                        <td>7.0</td>
+                        <td>8.0</td>
+                        <td>90%</td>
+                        <td>Aprobado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!--Abrimos la última sección-->
+        <section id="registro">
+            <h2>4. Formulario Completo de Usuario</h2>
+            <!--Con la etiqueta <form> creamos un formulario que se enviará al servidor para ser procesado-->
+            <!--Usamos el método POST para enviar los datos del formulario de manera segura (oculta)-->
+            <form action="procesar_formulario.php" method="post">
+                <!--Con <fieldset> agrupamos los elementos del formulario y con <legend> damos un título al grupo-->
+                <fieldset>
+                    <legend>1. Información de Contacto y Acceso</legend>
+                    <br>
+                    <!--Con <label> asociamos un texto a un campo de entrada-->
+                    <label for="busqueda">Búsqueda rápida de usuario:</label>
+                    <br>
+                    <!--Un <input> de tipo search nos permite crear campos de entrada de búsqueda-->
+                    <input type="search" id="busqueda" name="busqueda" placeholder="Buscar perfil...">
+                    <br><br>
+                    <label for="correo">Correo corporativo:</label>
+                    <br>
+                    <!--Con un <input> de tipo email creamos un campo de entrada para el correo electrónico-->
+                    <input type="email" id="correo" name="correo" placeholder="usuario@empresa.com">
+                    <br><br>
+                    <label for="web_personal">Página Web personal:</label>
+                    <br>
+                    <!--Un <input> de tipo url nos permite insertar una página web-->
+                    <input type="url" id="web_personal" name="web_personal" placeholder="https://www.misitio.com">
+                    <br><br>
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <br>
+                    <!--Un <input> de tipo tel nos permite crear un campo de entrada para un número de teléfono-->
+                    <input type="tel" id="telefono" name="telefono" placeholder="600123456">
+                    <br><br>
+                    <label for="dni">DNI:</label>
+                    <br>
+                    <!--Un <input> de tipo text nos permite crear campos de entrada de texto-->
+                    <!--El atributo "required" indica que el campo es obligatorio-->
+                    <!--Con el atributo "pattern" definimos un patrón de validación para el campo-->
+                    <input type="text" id="dni" name="dni" required placeholder="12345678X" pattern="[0-9]{8}[A-Z]{1}">
+                    <br><br>
+                    <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                </fieldset>
+                <br>
+                <!--Abrimos un nuevo fieldset, como si fuese una sección adicional-->
+                <fieldset>
+                    <legend>2. Configuración de Parámetros y Preferencias</legend>
+                    <br>
+                    <label for="entero">Número entero:</label>
+                    <br>
+                    <!--Un <input> de tipo number nos permite crear un campo de entrada para un número-->
+                    <!--Podemos especificar valores mínimos, máximos y el paso entre ellos-->
+                    <input type="number" id="entero" name="entero" min="2" max="10" step="2" value="6">
+                    <br><br>
+                    <label for="decimal">Número decimal:</label>
+                    <br>
+                    <!--Para añadir números decimales, usamos el atributo "step" para especificar el paso entre valores-->
+                    <input type="number" id="decimal" name="decimal" step="0.0001" value="3.1416">
+                    <br><br>
+                    <label for="capacidad">Nivel de satisfacción:</label>
+                    <br>
+                    <!--Con el <input> de tipo range creamos un deslizador para seleccionar un valor-->
+                    <input type="range" id="capacidad" name="capacidad" min="0" max="100" step="10" value="50">
+                    <br><br>
+                    <label for="ciudad">Ciudad de Origen:</label>
+                    <br>
+                    <!--El atributo "list" nos permite asociar un menú desplegable con opciones predefinidas-->
+                    <input type="text" id="ciudad" name="ciudad" list="ciudades" placeholder="Seleccione o escriba...">
+                    <!--Usamos <datalist> para definir las opciones del menú desplegable-->
+                        <datalist id="ciudades">
+                            <option value="Jerez de la Frontera">
+                            <option value="Cádiz">
+                            <option value="Sevilla">
+                            <option value="Córdoba">
+                        </datalist>
+                    <br><br>
+                    <label for="color">Color corporativo preferido:</label>
+                    <br>
+                    <!--Un <input> de tipo color nos permite crear un selector de color-->
+                    <input type="color" id="color" name="color" value="#FFFFFF">
+                    <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                    <br>
+                </fieldset>
+                <br>
+                <!--Abrimos un nuevo fieldset, como si fuese una sección adicional-->
+                <fieldset>
+                    <legend>3. Disponibilidad Horaria</legend>
+                    <br>
+                    <label for="cita">Fecha de cita:</label>
+                    <br>
+                    <!--Con el <input> de tipo date creamos un selector de fecha-->
+                    <input type="date" id="cita" name="cita">
+                    <br><br>
+                    <label for="hora">Hora preferida:</label>
+                    <br>
+                    <!--Con el <input> de tipo time creamos un campo de entrada para seleccionar una hora específica-->
+                    <input type="time" id="hora" name="hora" value="15:00">
+                    <!--Cerramos el fieldset para finalizar la agrupación de elementos-->
+                </fieldset>
+                <br>
+                <!--Submit envía el formulario al servidor-->
+                <button type="submit">Enviar Formulario</button>
+                <!--Reset borra los datos ingresados en el formulario-->
+                <button type="reset">Restablecer Formulario</button>
+            </form>
+        </section>
+        </main> <!--Cerramos la parte principal de la web-->
+        <hr>
+        <!--
+    ╔═══════════════════════╗
+    ║        FOOTER         ║
+    ╚═══════════════════════╝
+    -->
+    <footer> <!--Pie de página-->
+    <p>&copy; 2026 Material Docente de Lenguaje de Marcas. Ejercicio de Estructura, Listas y Tablas. Por Raymond Escobar</p>
+    </footer>
+    <!--
+    ╔═══════════════════════╗
+    ║         STYLE         ║
+    ╚═══════════════════════╝
+    -->
+    <!--A partir de este punto añadimos estilos y formatos CSS dentro del HTML con la etiqueta style-->
+    
+    <style>
+        /*Comenzamos por dar un formato general al cuerpo del documento*/
+        body {
+            color: black; /*Color para cambiar el color de fuente*/
+            background-color: #f3e6ec; /*Background-color para cambiar el color del fondo*/
+            text-align: left; /*Text-aling para establecer la alineación del texto*/
+            font-family: Arial, sans-serif; /*Font-family para indicar el tipo de fuente a usar*/
+            border: 3px solid #184E35; /*Border para agregar un borde al cuerpo del documento*/
+        }
+
+        /*Luego damos formato a los selectores del más genérico al más específico*/
+        header {
+            background-color: #4E1831;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-family: 'Lucida Sans', sans-serif, monospace; 
+            font-style: italic;
+            text-shadow: 2px 2px 4px #000000; /*Text-shadow para agregar sombra al texto*/
+        }
+
+        /*Podemos dar formato a un selector que se encuentra dentro de otro selector*/
+        nav a {
+            color: #dbcce6; /*Color para cambiar el color de los enlaces*/
+            text-decoration: none; /*Text-decoration para quitar el subrayado de los enlaces*/
+            margin: 0 10px; /*Margin para agregar espacio entre los enlaces*/
+            font-style: normal;
+        }
+
+        /*Con :hover aplicamos un formato cuando el mouse está sobre el elemento*/
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline; /*Añade una línea bajo el texto*/
+        }
+        
+        h2 {
+            font-family: Georgia, serif; 
+            color: #288058;
+        }
+
+        /*Con una coma, podemos aplicar el mismo formato a múltiples elementos*/
+        h3, h4 {
+            font-family: Georgia, serif; 
+            color: #8a2452;
+        }
+
+        /*También se puede cambiar el estilo de la línea horizontal*/
+        hr {
+            border: 4px double #184E35;
+            margin: 15px 0;
+        }
+
+        section {
+            margin: 15px;
+            padding: 15px;
+            background-color: white;
+            border: 5px double #184E35;
+            border-radius: 5px;
+        }
+
+        dt {
+            color: #8a2452;
+        }
+
+        /*Agregamos un formato para la tabla*/
+        table, th {
+            border: 3px inset #636363;
+            border-collapse: collapse; /*Esta propiedad hace que los bordes de la tabla se unan*/
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        td {
+            border: 2px inset #8a2452;
+            padding: 5px;
+        }
+
+        /*Para dar formato a una clase específica, se utiliza el punto seguido del nombre de la clase*/
+        .encabezado_tabla {
+            background-color: #4E1831;
+            color: #ffffff;
+            font-family: Georgia, serif; 
+        }
+
+        .id {
+            background-color: #f3e6ec;
+            font-weight: bold;
+        }
+
+        legend {
+            font-family: Georgia, serif; 
+            color: white;
+            background-color: #4E1831;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            border: 2px dotted #184E35;
+            padding: 10px; /*Padding agrega un margen interno al elemento*/
+            border-radius: 5px;
+            background-color: #f3e6ec;
+        }
+
+        button {
+            background-color: #4E1831;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 3px;
+            margin: 5px 0;
+            border: 1px solid #288058;
+            border-radius: 5px;
+        }
+
+        /*En este caso, agregamos un formato para el botón cuando el mouse está sobre él*/
+        button:hover {
+            background-color: #288058;
+            transition: 0.3s ease; /*Agrega una transición suave al cambiar el color de fondo*/
+        }
+
+    footer {
+            background-color: #184E35;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+<!--Finalizamos cerrando las etiquetas de Body y HTML-->
+</body>
+</html>

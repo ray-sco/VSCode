@@ -1,0 +1,223 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 21                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html> <!--Definimos documento como HTML5-->
+<html lang="es"> <!--Establecemos el lenguaje en español-->
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--En head ponemos los metadatos y título-->
+<head>
+    <meta charset="UTF-8"> <!--Seleccionamos la codificación de caracteres-->
+    <title>Ejercicio: Estructura Semántica, Listas y Tablas</title> <!--Indicamos el título de la web-->
+</head>
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--En body ponemos el contenido que el usuario observará-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <header>
+        <h1>Guía Completa de Desarrollo Web en HTML5</h1> <!--Título principal-->
+        <p>Ejemplo docente: Estructura semántica avanzada</p>
+    </header>
+    <hr> <!--Agregamos una línea divisoria-->
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <main>
+        <!--Añadimos una primera sección-->
+        <section id="requisitos">
+            <!--Usamos las etiquetas <h2>, <h3> y subsiguientes para crear encabezados jerárquicos-->
+            <h2>Requisitos del Entorno de Desarrollo</h2>
+            <p>Esta primera sección agrupa los componentes y herramientas necesarias para empezar a programar.</p>
+            <h3>Herramientas indispensables:</h3>
+            <!--<ul> nos permitirá crear listas no ordenadas-->
+            <ul>
+                <li>Editor de código fuente (por ejemplo, VS Code)</li> <!--Cada item de la lista se denomina con <li>-->
+                <li>Navegador web moderno actualizado</li>
+                <li>Ganas de practicar y resolver problemas</li>
+            </ul>
+        </section>        
+        <!--Damos por finalizada la sección y creamos una nueva-->
+        <section id="metodologia">
+            <h2>Metodología de Trabajo</h2>
+            <p>Esta segunda sección aborda el procedimiento secuencial para el despliegue de un sitio web.</p>
+            <h3>Pasos para publicar una página web:</h3>
+            <ol> <!--Usamos OL para añadir listas numeradas-->
+                <li>Escribir la estructura HTML y validar las etiquetas.</li>
+                <li>Aplicar estilos CSS3 para la presentación visual.</li>
+                <li>Subir los archivos a un servidor web a través de un hosting.</li>
+            </ol>
+        </section>
+        <!--Damos por finalizada la sección y creamos una nueva-->
+        <section id="conceptos">
+            <h2>Conceptos Teóricos</h2>
+            <p>Esta tercera sección recopila los términos teóricos fundamentales del lenguaje de marcas.</p>
+            <dl> <!--DL permite añadir listas de definición con sus términos (DT) y detalles (DD)-->
+                <dt><strong>HTML5</strong></dt> <!--Con strong ponemos el texto en negrita-->
+                <dd>Lenguaje de marcado utilizado para estructurar y presentar el contenido en la web.</dd>
+                <dt><strong>CSS3</strong></dt>
+                <dd>Lenguaje de hojas de estilo utilizado para describir la presentación visual de un documento HTML.</dd>
+            </dl>
+        </section>
+        <!--Damos por finalizada la sección y pasamos al artículo-->
+        <!--Mediante <article>, creamos un apartado independiente de las secciones-->
+        <article id="articulo"> 
+            <h2>Noticia: Publicada la Tabla de Horarios del Curso 2026</h2>
+            <h3>Horario de Clases Semanal</h3>
+            <table> <!--Con <table> insertamos una tabla de datos-->
+                <thead> <!--Encabezado de la tabla-->
+                    <tr> <!--Fila de encabezado-->
+                        <th scope="col" class="encabezado_tabla">Hora</th> <!--Las celdas de encabezado se identifican con el atributo scope-->
+                        <th scope="col" class="encabezado_tabla">Lunes</th>
+                        <th scope="col" class="encabezado_tabla">Miércoles</th>
+                        <th scope="col" class="encabezado_tabla">Viernes</th>
+                    </tr>
+                </thead>
+                <tbody> <!--Cuerpo de la tabla-->
+                    <tr> <!--Fila de datos-->
+                        <td class="hora">08:00 - 09:30</td> <!--Con <td> insertamos una celda de datos estándar-->
+                        <td>HTML5 Semántico</td>
+                        <td>Estilos CSS3</td>
+                        <td>Taller Práctico</td>
+                    </tr>
+                    <tr>
+                        <td class="hora">09:30 - 11:00</td> <!--creamos una clase que nos ayudará más adelante a crear un formato para las celdas de hora-->
+                        <td>Formularios Web</td>
+                        <td>Tablas y Listas</td>
+                        <td>Evaluación</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </main> <!--Cerramos la parte principal de la web-->
+    <hr>
+    <!--
+    ╔═══════════════════════╗
+    ║        FOOTER         ║
+    ╚═══════════════════════╝
+    -->
+    <footer> <!--Pie de página-->
+    <p>&copy; 2026 Material Docente de Lenguaje de Marcas. Ejercicio de Estructura, Listas y Tablas. Por Raymond Escobar</p>
+    </footer>
+    <!--
+    ╔═══════════════════════╗
+    ║         STYLE         ║
+    ╚═══════════════════════╝
+    -->
+    <!--A partir de este punto añadimos estilos y formatos CSS dentro del HTML con la etiqueta style-->
+    <style>
+        /*Comenzamos por dar un formato general al cuerpo del documento*/
+        body {
+            color: black; /*Color para cambiar el color de fuente*/
+            background-color: #D3DFEE; /*Background-color para cambiar el color del fondo*/
+            text-align: left; /*Text-aling para establecer la alineación del texto*/
+            font-family: Arial, sans-serif; /*Font-family para indicar el tipo de fuente a usar*/
+        }
+
+        /*Luego damos formato a los selectores del más genérico al más específico*/
+        header {
+            background-color: #264366;
+            text-align: center;
+            padding: 20px;
+            color: #AEC4E0;
+            font-family: Georgia, serif; 
+        }
+
+        /*Se puede dar formato a un elemento en particular dentro de un selector, en este caso el párrafo dentro del encabezado*/
+        header p {
+            color: #bea3d3;
+            font-style: italic;
+            font-size: large;
+        }
+
+        /*Con una coma, podemos aplicar el mismo formato a múltiples elementos*/
+        h2, h3 {
+            font-family: Georgia, serif; 
+            color: #6f3a9a;
+        }
+
+        /*También se puede cambiar el estilo de la línea horizontal*/
+        hr {
+            border: 3px dotted #2D296A;
+            margin: 20px 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 15px;
+            background-color: #F0F4F8;
+            border-radius: 10px;
+        }
+
+        dt {
+            color: #4372AD;
+        }
+
+        /*Damos un formato específico al artículo para diferenciarlo de las secciones*/
+        article {
+            margin: 20px;
+            padding: 15px;
+            background-color: #355A88;
+            border-radius: 10px;
+            color: #F0F4F8;
+        }
+
+        article h2 {
+            color: #AEC4E0;
+        }
+        
+        article h3 {
+            color: #bea3d3;
+        }
+
+        /*Agregamos un formato para la tabla*/
+        table, th, td {
+            border: 5px inset #AEC4E0;
+            border-collapse: collapse; /*Esta propiedad hace que los bordes de la tabla se unan*/
+            text-align: center;
+            padding: 10px;
+            background-color: #F0F4F8;
+            color: #264366;
+        }
+
+        /*Para dar formato a una clase específica, se utiliza el punto seguido del nombre de la clase*/
+        .encabezado_tabla {
+            background-color: #264366;
+            color: #ffffff;
+            font-family: Georgia, serif; 
+        }
+
+        .hora {
+            background-color: #D3DFEE;
+            font-weight: bold;
+        }
+
+    footer {
+            background-color: #0e1b2a;
+            text-align: center;
+            padding: 10px;
+            color: #AEC4E0;
+        }
+    </style>
+
+<!--Finalizamos cerrando las etiquetas de Body y HTML-->
+</body>
+</html>

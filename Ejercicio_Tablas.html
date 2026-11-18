@@ -1,0 +1,216 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO: EJERCICIO CON TABLAS                                          ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html> <!--Definimos documento como HTML5-->
+<html lang="es"> <!--Establecemos el lenguaje en español-->
+
+<!--En head ponemos los metadatos y título-->
+<head>
+    <meta charset="UTF-8"> <!--Seleccionamos la codificación de caracteres-->
+    <title>Ejercicio con Tablas</title> <!--Indicamos el título de la web-->
+</head>
+
+<!--En body ponemos el contenido que el usuario observará-->
+<body>
+    <header>
+        <h1>Ejercicios con tablas</h1> <!--Título principal-->
+    </header>
+    <hr> <!--Agregamos una línea divisoria-->
+    <main>
+        <section>
+            <table id="primera_tabla">
+            <caption>Tabla de Empleados</caption>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Salario</th>
+                </tr>
+                <tr>
+                    <td>María José</td>
+                    <td>Ramón</td>
+                    <td>4624614M</td>
+                    <td>Directora</td>
+                    <td>Avenida de San José 72, Huelva</td>
+                    <td>5.470 €</td>
+                </tr>
+                <tr>
+                    <td>Pablo</td>
+                    <td>Motos</td>
+                    <td>16325456F</td>
+                    <td>Gerente General</td>
+                    <td>Calle los Álamos 24, Jerez de la Frontera</td>
+                    <td>6.120 €</td>
+                </tr>
+                <tr>
+                    <td>Álvaro</td>
+                    <td>de la Fuente</td>
+                    <td>2230701K</td>
+                    <td>Coordinador</td>
+                    <td>Calle el Amanecer 5, Sevilla</td>
+                    <td>4.990 €</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <section>
+            <table id="segunda_tabla">
+            <caption>Horario de clases</caption>
+                <tr>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Lunes</th>
+                    <th scope="col">Martes</th>
+                    <th scope="col">Miércoles</th>
+                    <th scope="col">Jueves</th>
+                    <th scope="col">Viernes</th>
+
+                </tr>
+                <tr>
+                    <td class="hora">8:00 - 9:00</td>
+                    <td rowspan="2">Lenguaje de Marcas</td>
+                    <td>Bases de Datos</td>
+                    <td rowspan="3">Programación</td>
+                    <td>Lenguaje de Marcas</td>
+                    <td>Sistemas Informáticos</td>
+                </tr>
+                <tr>
+                    <td class="hora">9:00 - 10:00</td>
+                    <td>Programación</td>
+                    <td>Bases de Datos</td>
+                    <td rowspan="2">Lenguaje de Marcas</td>
+                <tr>
+                    <td class="hora">10:00 - 11:00</td>
+                    <td>Digitalización</td>
+                    <td>IPE I</td>
+                    <td>Programación</td>
+                </tr>
+                <tr>
+                    <td class="hora">11:00 - 12:00</td>
+                    <td>Lenguaje de Marcas</td>
+                    <td>Sostenibilidad</td>
+                    <td>Lenguaje de Marcas</td>
+                    <td>Entornos de Desarrollo</td>
+                    <td>Bases de Datos</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <section>
+            <table id="tercera_tabla">
+            <caption>Ventas anuales</caption>
+                <tr>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Empleado</th>
+                    <th scope="col">1º Trimestre</th>
+                    <th scope="col">2º Trimestre</th>
+                    <th scope="col">3º Trimestre</th>
+                </tr>
+                <tr>
+                    <td  class="dpto" rowspan="3">Tecnología</td>
+                    <td>Sergio Domínguez</td>
+                    <td>7.513 €</td>
+                    <td>12.941 €</td>
+                    <td>9.631 €</td>
+                </tr>
+                <tr>
+                    <td>Javier Núñez</td>
+                    <td>15.822 €</td>
+                    <td>6.254 €</td>
+                    <td>10.120 €</td>
+                </tr>
+                <tr>
+                    <td>José González</td>
+                    <td>12.964 €</td>
+                    <td>9.862 €</td>
+                    <td>20.054 €</td>
+                </tr>
+                <tr>
+                    <td class="dpto" rowspan="2">Hogar</td>
+                    <td>Martha Gallardo</td>
+                    <td>6.325 €</td>
+                    <td>9.314 €</td>
+                    <td>8.773 €</td>
+                </tr>
+                <tr>
+                    <td>Ana Domínguez</td>
+                    <td>11.965 €</td>
+                    <td>10.300 €</td>
+                    <td>9.321 €</td>
+                </tr>
+            </table>
+        </section>
+
+    </main> <!--Cerramos la parte principal de la web-->
+    <hr>
+    <footer> <!--Pie de página-->
+    <p>&copy; 2026. Raymond Escobar - Lenguajes de Marcas - 1º DAW</p>
+    </footer>
+
+    <!--A partir de este punto añadimos estilos y formatos CSS dentro del HTML con la etiqueta style-->
+    <style>
+        table, th, td {
+            border: 5px inset grey;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #primera_tabla th {
+            background-color: rgb(0, 75, 31);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        #segunda_tabla th {
+            background-color: #775a36;
+            color: beige;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+        }
+
+        #segunda_tabla td {
+            border: 2px dotted black;
+            font-family: Cochin, Georgia; 
+        }
+
+        .hora {
+            background-color: bisque;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        #tercera_tabla table, th {
+            background-color: #6103cc;
+            color: rgb(231, 249, 255);
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            border: 4px groove black;
+        }
+
+        #tercera_tabla td {
+            border: 4px groove black;
+            font-family: Cochin, Georgia; 
+        }
+
+        .dpto {
+            background-color: rgb(209, 196, 255);
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+            font-size: large;
+            text-align: right;
+        }
+    </style>
+
+<!--Finalizamos cerrando las etiquetas de Body y HTML-->
+</body>
+</html>

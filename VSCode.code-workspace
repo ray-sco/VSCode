@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "C:/Users/rjesc/Desktop/1 DAW/VSCode"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VSCode"
+	}
+}

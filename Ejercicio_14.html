@@ -1,0 +1,304 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 14                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!--Usamos <!DOCTYPE> para declarar el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Abrimos la etiqueta <html> y especificamos el lenguaje en español-->
+<html lang="es">
+
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--Usamos la etiqueta <head> para almacenar los metadatos y título de la página-->
+<head>
+    <!--En la etiqueta <meta> especificamos la codificación de caracteres. UTF-8 incluye caracteres en español-->
+    <meta charset="UTF-8">
+    <!--Con <title> especificamos el título que se mostrará en la pestaña de la página web-->
+    <title>Moda Urbana - Tienda de Ropa - Raymond J. Escobar G.</title>
+</head>
+
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--La etiqueta <body> es donde estará la mayor parte del contenido que se mostrará al usuario-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <header> agregamos el encabezado de nuestra web-->
+    <header>
+        <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos en orden jerárquico-->
+        <h1>Moda Urbana 2026 - Tendencias y Estilo</h1>
+        <!--Podemos añadir párrafos con la etiqueta <p>-->
+        <p>Encuentra tu estilo propio con nuestra nueva colección de temporada.</p>
+        <!--La etiqueta <nav> agrupa un bloque de enlaces-->
+        <nav>
+            <!--con <ul> agregamos una lista no ordenada-->
+            <ul>
+                <!--<li> nos permite agregar elementos o items a la lista-->
+                <!--la etiqueta <a> añade un enlace y se usa con el atributo href para especificar la ruta-->
+                <li><a href="#coleccion">Colección</a></li>
+                <li><a href="#tallas">Guía de Tallas</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+                <!--Los enlaces anteriores hacen referencia a partes dentro del mismo HTML, por lo que son de tipo relativo-->
+            </ul>
+        </nav>
+    </header>
+    <!--Usamos <hr> para agregar una línea divisoria horizontal que separa la cabecera del main-->
+    <hr>
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <main> incuiremos el contenido principal de la página-->
+    <main>
+        <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <section id="coleccion">
+            <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos. A medida que se incremente el número, el <h> destaca menos-->
+            <h2>Nuestra Colección de Otoño</h2>
+            <!--La etiqueta <article> envuelve un contenido independiente o autónomo-->
+            <article>
+                <h3>Chaqueta Denim Oversize</h3>
+                <h4>Edición limitada de algodón reciclado</h4>
+                <!--Usamos <figure> como caja contenedora de un elemento multimedia, como fotos o vídeos-->
+                <figure>
+                    <!--Con <img> agregamos imágenes, se acompañan de los atributos "src" para indicar la ruta y "alt" para colocar un texto descriptivo-->
+                        <img src="https://i.ibb.co/zW2M8Rg1/ej14-chaqueta.jpg" alt="Foto de Chaqueta Denim Oversize">
+                        <!--Para agregar una leyenda al pie de foto se usa la etiqueta <figcaption>-->
+                        <figcaption>Figura 1: Chaqueta vaquera de corte moderno unisex.</figcaption>
+                </figure> 
+                <!--Añadimos nuevos párrafos usando <p>-->
+                <p> Novedad de septiembre de 2026. Confeccionada con 
+                    <!--Con <strong> ponemos el texto en negrita-->
+                    <strong>algodón 100% orgánico</strong> 
+                    y acabados hechos a mano.
+                </p>
+                <button type="button">Añadir al carrito</button>
+            <!--Procedemos a cerrar el artículo-->
+            </article>
+            <!--Abrimos un nuevo <article> para añadir más artículos a la venta-->
+            <article>
+                <!--Nuevamente creamos subtítulos con <h3> y <h4>-->
+                <h3>Sudadera Minimalist Hoodie</h3>
+                <h4>Comodidad y diseño para el día a día</h4>
+                <!--Creamos un nuevo contenedor de imagen con <figure>-->
+                <figure>
+                    <!--Usamos <img> para añadir la imagen del portátil-->
+                    <img src="https://i.ibb.co/Sw41D9Y0/ej14-sudadera.jpg" alt="Foto de Sudadera minimalista colo beige">
+                    <!--Para agregar una leyenda al pie de foto se usa la etiqueta <figcaption>-->
+                    <figcaption>Figura 2: Sudadera urbana en tono beige neutro.</figcaption>
+                </figure>
+                <!--Añadimos nuevos párrafos usando <p>-->
+                <p> Diseñada con felpa de tacto suave y chasis interior 
+                    <!--Con <em> enfatizamos el texto-->
+                    <em>ultra cálido. </em> 
+                     Disponible en 4 colores.
+                </p>
+                <!--La etiqueta <button> permite añadir botones-->
+                <button type="button">Añadir al carrito</button>
+            <!--Procedemos a cerrar el artículo-->
+            </article>
+            <!--Abrimos el artículo para el producto final-->
+            <article>
+                <!--Nuevamente creamos subtítulos con <h3> y <h4>-->
+                <h3>Pantalón Cargo Streetwear</h3>
+                <h4>Múltiples bolsillos y ajuste elástico</h4>
+                <figure>
+                    <img src="https://i.ibb.co/rGjRVhqd/ej14-pantalon.jpg" alt="Foto de Pantalón cargo">
+                    <figcaption>Figura 3: Pantalón cargo resistente para estilo urbano.</figcaption>
+                </figure>
+                <p> La prenda más versátil de la temporada. Destaca por ser 
+                    <!--Con <strong> ponemos el texto en negrita-->
+                    <strong>muy funcional </strong>
+                    y cómoda.
+                </p>
+                <button type="button">Añadir al carrito</button>
+            <!--Cerramos el artículo-->
+            </article>
+        <!--Y cerramos también la sección de "Catálogo"-->
+        </section>
+        <!--Usamos <hr> para agregar una línea divisoria horizontal entre secciones-->
+        <hr>
+        <!--Abrimos una nueva sección y le añadimos el atributo "id" para asociarlo al contenido de "Cómo adoptar"-->
+
+        <!--Comenzamos con la sección de "tallas" y le añadimos su respectivo "id"-->
+        <section id="tallas">
+            <!--Ponemos el subtítulo de la sección-->
+            <h2>Guía de Tallas Estándar</h2>
+            <!--Añadimos un nuevo párrafo-->
+            <p>Consulta las medidas en centímetros antes de elegir tu prenda:</p>
+            <!--Procedemos a insertar una tabla-->
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Talla</th>
+                        <th scope="col">Pecho (cm)</th>
+                        <th scope="col">Cintura (cm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>88 - 92</td>
+                        <td>74 - 78</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>96 - 100</td>
+                        <td>82 - 86</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>104 - 108</td>
+                        <td>90 - 94</td>
+                    </tr>
+                </tbody>
+            </table>
+        <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
+            <!--Añadimos un párrafo explicativo-->
+            <p>Pasos para medirte correctamente:</p>
+            <!--Usamos <ol> para añadir una lista con elementos <li> en orden numérico-->
+            <ol>
+                <li><strong>Pecho:</strong> Mide el contorno por la zona más prominente.</li>
+                <li><strong>Cintura:</strong> Mide alrededor de tu cintura natural sin apretar.</li>
+                <!--Previamente usamos <strong> para agregar negritas al título de cada elemento-->
+            <!--Cerramos la etiqueta de lista ordenada y la sección-->
+            </ol>
+        </section>
+        <!--Usamos un nuevo <hr> dividir secciones-->
+        <hr>
+        <!--Comenzamos con la sección de "dudas frecuentes" y le añadimos su respectivo "id"-->
+        <section id="faq">
+            <!--Ponemos el subtítulo de la sección-->
+            <h2>Dudas Frecuentes y Envíos</h2>
+            <details>
+                <summary>¿Cuánto tardan los envíos? (Haz clic para desplegar)</summary>
+                <p>Los envíos estándar tardan entre 3 y 5 días hábiles. Los envíos exprés se entregan en 24 horas.</p>
+            </details>
+            <details>
+                <summary>¿Cómo funcionan las devoluciones?</summary>
+                <p>Todos nuestros productos cuentan con un plazo de 14 días para devoluciones.</p>
+            </details>
+
+            <!--Con blockquote añadimos un bloque para agregar citas textuales extensas-->
+            <blockquote>
+            "Moda Urbana destaca por su rapidez de entrega y excelente calidad de prendas en 2026."
+            <!--Con <br> forzamos un salto de línea-->
+            <br>
+            <!--Referimos al autor del texto con la etiqueta <cite>-->
+            <cite>— Revista Tendencias & Moda</cite>
+            <!--Cerramos el bloque de citas-->
+            </blockquote>
+            <!--Añadimos el último párrafo del cuerpo del HTML-->
+            <p>Para más información consulta la 
+               <!--Con la etiqueta <a> añadimos un enlace a una web externa-->
+               <a href="https://www.asociacionmoda.es/">Asociación de Comercio Textil</a>.
+            </p>
+        <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
+        </section>
+    </main>
+    <!--Nos valemos del <hr> para crear la línea divisoria entre el <main> y el <footer>-->
+    <hr>
+<!--
+╔═══════════════════════╗
+║        FOOTER         ║
+╚═══════════════════════╝
+-->
+    <!--El pie de página de la web estará contenido en el footer-->
+    <footer>
+        <!--Finalizamos agregando el pie de página como un párrafo-->
+        <p>&copy; 2026  Urbana SpA. Todos los derechos reservados. Por Raymond Escobar</p>
+    </footer>
+
+<!--Para personalizar el formato y aspecto visual de nuestro HTML,
+agregamos la etiqueta <style> a partir de este punto.-->
+<!--
+╔═══════════════════════╗
+║         STYLE         ║
+╚═══════════════════════╝
+-->
+    <style>
+    /* En CSS los comentarios se crean con barra lateral, asterisco, y terminan con asterisco, barra lateral */
+
+    /*Para aplicar un formato específico a un selector, escribimos el nombre del selector y escribimos las propiedades encerradas entre corchetes*/
+    body, article {
+        font-family: 'Trebuchet MS', sans-serif; /*font-family sirve para indicar el tipo de fuente que se usará en el selector*/
+        background-color: #f8f8f8; /*background-color permite especificar el color de fondo del selector*/
+        text-align: center; /*text-align establece el formato de alineación del texto*/
+        padding: 20px; /*padding indica el tamaño del margen interno del selector*/
+    }
+
+    /*A medida que el selector es más específico, tiene mayor prioridad de aplicación.
+    Por ejemplo: Los cambios en "header" se aplican por encima del formato en "body" que es más genérico*/
+    header {
+        font-family: 'Helvetica Neue', Arial;
+        background-color: #111111;
+        text-align: center;
+        padding: 25px;
+        color: white;
+    }
+
+    /*Se puede aplicar una propiedad a un selector que se encuentra dentro de otro.
+    En este ejemplo, se aplica a la etiqueta <a> contenida en el header*/
+    header a {
+        color: #e67e22; /*Cambiamos el color de los enlaces del header*/
+    }
+
+    /*Para asignar un formato a un ID específico del HTML, se escribe almohadilla seguido del nombre del ID*/
+    #coleccion {
+        font-family: 'Arial', sans-serif;
+        background-color: #f2efe9;
+        text-align: center;
+        padding: 40px;
+    }
+
+    #tallas {
+        font-family: 'Georgia', serif; /*En font-family se pueden establecer dos o más tipos de fuentes alternativas para que el navegador pueda mostrar la página en caso de no contar con la fuente principal*/
+        background-color: #eaf2f8;
+        text-align: left;
+        padding: 30px;
+    }
+    
+    /*Asignamos el formato a la tabla, especificando las características del borde y el ancho de página que ocupa*/
+    table, th, td {
+            border: 3px solid lightgrey;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+            width: 30%;
+        }
+
+    #faq {
+        font-family: 'Verdana', sans-serif;
+        background-color: #eaafaf25;
+        text-align: right;
+        padding: 30px; /*El espacio que ocupa padding puede indicarse en píxeles, porcentajes o em*/
+    }
+
+    footer {
+        font-family: 'Comic Sans MS', cursive;
+        background-color: #222222;
+        color: #d5dbdb; /*Los colores en CSS se pueden escribir como palabras en inglés, en formato RGB o hexadecimal*/
+        text-align: center;
+        padding: 15px;
+    }
+    </style>
+
+<!--Una vez completo el cuerpo de nuestra web, cerramos la etiqueta de <body>-->
+</body>
+<!--Finalizamos con el cierre del documento HTML-->
+</html>

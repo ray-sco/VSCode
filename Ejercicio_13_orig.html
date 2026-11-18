@@ -1,0 +1,276 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 13                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!--Usamos <!DOCTYPE> para declarar el tipo de documento como HTML-->
+<!DOCTYPE html>
+<!--Abrimos la etiqueta <html> y especificamos el lenguaje en español-->
+<html lang="es">
+
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--Usamos la etiqueta <head> para almacenar los metadatos y título de la página-->
+<head>
+    <!--En la etiqueta <meta> especificamos la codificación de caracteres. UTF-8 incluye caracteres en español-->
+    <meta charset="UTF-8">
+    <!--Con <title> especificamos el título que se mostrará en la pestaña de la página web-->
+    <title>TechStore - Tienda de Informática - Raymond J. Escobar G.</title>
+</head>
+
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--La etiqueta <body> es donde estará la mayor parte del contenido que se mostrará al usuario-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <header> agregamos el encabezado de nuestra web-->
+    <header>
+        <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos en orden jerárquico-->
+        <h1>TechStore 2026 - Tu Tienda de Informática</h1>
+        <!--Podemos añadir párrafos con la etiqueta <p>-->
+        <p>Los mejores componentes y ordenadores montados al mejor precio.</p>
+        <!--La etiqueta <nav> agrupa un bloque de enlaces-->
+        <nav>
+            <!--con <ul> agregamos una lista no ordenada-->
+            <ul>
+                <!--<li> nos permite agregar elementos o items a la lista-->
+                <!--la etiqueta <a> añade un enlace y se usa con el atributo href para especificar la ruta-->
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#garantia">Garantía</a></li>
+                <li><a href="#opinion">Opiniones</a></li>
+                <!--Los enlaces anteriores hacen referencia a partes dentro del mismo HTML, por lo que son de tipo relativo-->
+            </ul>
+        </nav>
+    </header>
+    <!--Usamos <hr> para agregar una línea divisoria horizontal que separa la cabecera del main-->
+    <hr>
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <!--En <main> incuiremos el contenido principal de la página-->
+    <main>
+        <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <section id="catalogo">
+            <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos. A medida que se incremente el número, el <h> destaca menos-->
+            <h2>Catálogo de Ordenadores Destacados</h2>
+            <!--La etiqueta <article> envuelve un contenido independiente o autónomo-->
+            <article>
+                <h3>PC Gaming Ultra 2026</h3>
+                <h4>Ideal para jugar a 4K y streaming</h4>
+                <!--Usamos <figure> como caja contenedora de un elemento multimedia, como fotos o vídeos-->
+                <figure>
+                    <!--Con <img> agregamos imágenes, se acompañan de los atributos "src" para indicar la ruta y "alt" para colocar un texto descriptivo-->
+                        <img src="https://i.ibb.co/ynxTVYXH/pc-gamer.png" alt="Foto de PC Gaming Ultra 2026">
+                        <!--Para agregar una leyenda al pie de foto se usa la etiqueta <figcaption>-->
+                        <figcaption>Figura 1: Torre PC Gaming con refrigeración líquida.</figcaption>
+                </figure> 
+                <!--Añadimos nuevos párrafos usando <p>-->
+                <p> Lanzado en enero de 2026. Equipado con procesador de última 
+                    generación y 32 GB de RAM. Incluye tarjeta gráfica .
+                    <!--Con <strong> ponemos el texto en negrita-->
+                    <strong>de alta gama</strong>.
+                </p>
+            <!--Procedemos a cerrar el artículo-->
+            </article>
+            <!--Abrimos un nuevo <article> para añadir más ordenadores a la venta-->
+            <article>
+                <!--Nuevamente creamos subtítulos con <h3> y <h4>-->
+                <h3>Portátil Workstation Pro</h3>
+                <h4>Potencia bruta para edición de vídeo</h4>
+                <!--Creamos un nuevo contenedor de imagen con <figure>-->
+                <figure>
+                    <!--Usamos <img> para añadir la imagen del portátil-->
+                    <img src="https://i.ibb.co/fGLFwdg2/portatil.png" alt="Foto de Portátil Workstation Pro">
+                    <!--Para agregar una leyenda al pie de foto se usa la etiqueta <figcaption>-->
+                    <figcaption>Figura 2: Portátil de alto rendimiento con pantalla OLED.</figcaption>
+                </figure>
+                <!--Añadimos nuevos párrafos usando <p>-->
+                <p> Diseñado para profesionales que necesitan movilidad. Cuenta con pantalla de  
+                    <!--Resaltamos el texto con la etiqueta <mark>-->
+                    <mark>120 Hz</mark> 
+                     y chasis de aluminio
+                    <!--Con <em> enfatizamos el texto-->
+                    <em>ultra resistente.</em>
+                </p>
+            <!--Procedemos a cerrar el artículo-->
+            </article>
+            <!--Abrimos el artículo para el Mini PC Oficina Eco-->
+            <article>
+                <!--Nuevamente creamos subtítulos con <h3> y <h4>-->
+                <h3>Mini PC Oficina Eco</h3>
+                <h4>Silencioso, compacto y de bajo consumo</h4>
+                <figure>
+                    <img src="https://i.ibb.co/RTRLYdNf/mini-pc.png" alt="Foto de Mini PC de Oficina Eco">
+                    <figcaption>Figura 3: Ordenador de formato reducido para escritorios pequeños.</figcaption>
+                </figure>
+                <p> La opción perfecta para tareas administrativas y navegación. Ocupa 
+                    <!--Con <strong> ponemos el texto en negrita-->
+                    <strong>muy poco espacio</strong> 
+                </p>
+            <!--Cerramos el artículo-->
+            </article>
+        <!--Y cerramos también la sección de "Catálogo"-->
+        </section>
+        <!--Usamos <hr> para agregar una línea divisoria horizontal entre secciones-->
+        <hr>
+        <!--Abrimos una nueva sección y le añadimos el atributo "id" para asociarlo al contenido de "Cómo adoptar"-->
+        <section id="garantia">
+            <!--Nuevamente creamos un subtítulo con <h2>-->
+            <h2>Pasos para Tramitar tu Garantía</h2>
+            <!--Añadimos un párrafo explicativo-->
+            <p>Sigue estas etapas si necesitas soporte técnico o sustitución:</p>
+            <!--Usamos <ol> para añadir una lista con elementos <li> en orden numérico-->
+            <ol>
+                <li><strong>Diagnóstico:</strong> Ponte en contacto con nuestro equipo técnico.</li>
+                <li><strong>Envío:</strong> Prepara el equipo en su caja original.</li>
+                <li><strong>Reparación:</strong> Nuestros técnicos revisan y reparan el equipo.</li>
+                <li><strong>Devolución:</strong> Te enviamos el equipo como nuevo a tu domicilio.</li>
+                <!--Previamente usamos <strong> para agregar negritas al título de cada elemento-->
+            <!--Cerramos la etiqueta de lista ordenada y la sección-->
+            </ol>
+        </section>
+        <!--Usamos un nuevo <hr> dividir secciones-->
+        <hr>
+        <!--Comenzamos con la sección de "opiniones" y le añadimos su respectivo "id"-->
+        <section id="opinion">
+            <!--Ponemos el subtítulo de la sección-->
+            <h2>Opinión de la Prensa Especializada</h2>
+            <!--Con blockquote añadimos un bloque para agregar citas textuales extensas-->
+            <blockquote>
+            "TechStore ofrece el mejor montaje de componentes de todo el sector informático en 2026."
+            <!--Con <br> forzamos un salto de línea-->
+            <br>
+            <!--Referimos al autor del texto con la etiqueta <cite>-->
+            <cite>— Revista Hardware Digital</cite>
+            <!--Cerramos el bloque de citas-->
+            </blockquote>
+            <!--Añadimos el último párrafo del cuerpo del HTML-->
+            <p>Puedes leer más análisis de nuestros equipos en la web de 
+               <!--Con la etiqueta <a> añadimos un enlace a una web externa-->
+               <a href="https://www.asociacionhardware.es/">Asociación Hardware</a>.
+            </p>
+        <!--Procedemos con el cierre de las etiquetas <section> y <main>-->
+        </section>
+    </main>
+    <!--Nos valemos del <hr> para crear la línea divisoria entre el <main> y el <footer>-->
+    <hr>
+    <!--
+╔═══════════════════════╗
+║        FOOTER         ║
+╚═══════════════════════╝
+-->
+    <!--El pie de página de la web estará contenido en el footer-->
+    <footer>
+        <!--Finalizamos agregando el pie de página como un párrafo-->
+        <p>© 2026 TechStore Informática. Todos los derechos reservados.</p>
+    </footer>
+<!--Una vez completo el cuerpo de nuestra web, cerramos la etiqueta de <body>-->
+</body>
+<!--Culminamos con el cierre del documento HTML-->
+</html>
+<!--Para personalizar el formato y aspecto visual de nuestro HTML,
+agregamos la etiqueta <style> a partir de este punto.-->
+<!--
+╔═══════════════════════╗
+║         STYLE         ║
+╚═══════════════════════╝
+-->
+<style>
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a252f;
+    text-align: center;
+    padding: 25px;
+}
+
+#catalogo {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f5;
+    text-align: center;
+    padding: 40px;
+}
+
+#garantia {
+    font-family: 'Georgia', serif;
+    background-color: #fff8dc;
+    text-align: left;
+    padding: 30px;
+}
+
+#opinion {
+    font-family: 'Verdana', sans-serif;
+    background-color: #e8f8f5;
+    text-align: right;
+    padding: 30px;
+}
+
+footer {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 15px;
+}
+
+ Explicación didáctica de los estilos CSS  
+
+* {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+body {
+    background-color: #1a252f;
+    color: white;
+}
+
+a {
+    color: #f39c12;
+}
+
+article {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f5;
+}
+
+li {
+    font-family: 'Serif', serif;
+    text-align: left;
+}
+
+#opinion blockquote, p {
+    background-color: #e8f8f5;
+    text-align: right;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+</style>
