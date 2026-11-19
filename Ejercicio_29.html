@@ -59,10 +59,12 @@
     <!--En <main> incuiremos el contenido principal de la página-->
     <main>
         <!--Con <section> agrupamos un bloque de contenido similar. Además usaremos el atributo "id" para individualizarlo dentro del HTML-->
+        <!--Agregamos una clase a la sección y otra al artículo para posteriormente agregar el formato en CSS-->
         <section id="planes" class="fila-planes">
             <article class="tarjeta-lateral">
                 <!--Con <h1> <h2> <h3> y siguientes, creamos títulos y subtítulos. A medida que se incremente el número, el <h> destaca menos-->
                 <h2>Plan Básico</h2>
+                <!--Añadimos una clase al precio-->
                 <p class="precio">9€ / mes</p>
                 <ul>
                     <li>1 Sitio Web</li>
@@ -72,6 +74,7 @@
                 <button type="submit">Elegir Básico</button>
             </article>
 
+            <!--Creamos una nueva clase para el formato de la tarjeta que contendrá el precio recomendado-->
             <article class="tarjeta-destacada">
                 <h2>Plan Pro (Recomendado)</h2>
                 <p class="precio">19€ / mes</p>
@@ -84,7 +87,7 @@
                 </ul>
                 <button type="submit">Contratar Plan Pro</button>
             </article>
-
+            <!--El tercer artículo compartirá el tipo de clase del primero, ya que tendrán formatos idénticos-->
             <article class="tarjeta-lateral">
                 <h2>Plan Empresa</h2>
                 <p class="precio">49€ / mes</p>
@@ -97,8 +100,11 @@
             </article>
         </section>
 
+        <!--En una nueva sección, incluiremos un contenedor padre que agrupará las novedades y las preguntas frecuentes-->
         <section id="novedades" class="fila-inferior">
+            <!--Adicionalmente, crearemos otro padre para la columna de novedades-->
             <div class="columna-doble">
+                <!--Dentro de este contenedor, diferenciaremos las clases de los hijos para personalizar sus formatos-->
                 <div class="caja-destacada-mini">
                     <h3>Novedad: Servidores en Madrid</h3>
                     <p>Todos nuestros planes ya cuentan con alojamiento en territorio nacional para máxima velocidad.</p>
@@ -108,7 +114,9 @@
                     <p>Trae tu página web desde otro proveedor y nuestro equipo técnico la traslada sin costes de servicio.</p>
                 </div>
             </div>
+            <!--Finalmente, crearemos un padre adicional para la columna de preguntas frecuentes-->
             <div class="columna-triple">
+                <!--Para las cajas, repetimos las clases creadas previamente, de acuerdo al formato que llevará cada hijo-->
                 <div class="caja-info">
                     <h3>¿Puedo cambiar de plan?</h3>
                     <p>Sí, puedes subir o bajar de tarifa en cualquier momento desde tu panel.</p>
@@ -147,12 +155,14 @@ agregamos la etiqueta <style> a partir de este punto.-->
     <style>
     /* En CSS los comentarios se crean con barra lateral, asterisco, y terminan con asterisco, barra lateral */
 
+        /*Damos un formato genérico básico al cuerpo del HTML*/
         body {
             font-family: Arial, sans-serif;
             background-color: #F1F2F6;
             margin: 0;
         }
 
+        /*Especificamos los colores y márgenes que tendrá nuestra cabecera*/
         header {
             background-color: #1E3799;
             color: white;
@@ -164,10 +174,12 @@ agregamos la etiqueta <style> a partir de este punto.-->
             padding-right: 15px;
         }
 
+        /*Especificamos el tamaño de fuente del título H1 presente en el header*/
         h1 {
             font-size: larger;
         }
 
+        /*Definimos el diseño de los enlaces que conforman nuestra barra de navegación*/
         nav ul li, a {
             list-style-type: none;
             margin: 5px;
@@ -180,6 +192,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             font-size: small;
         }
 
+        /*Creamos el formato para la fila superior, que tendrá los planes de suscripción*/
         .fila-planes {
             background-color: #DFF9FB;
             border-radius: 15px;
@@ -189,6 +202,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             margin-bottom: 25px;
         }
 
+        /*Formateamos la clase que dará forma a las tarjetas laterales de suscripción*/
         .tarjeta-lateral {
             background-color: white;
             border-radius: 15px;
@@ -199,6 +213,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             margin-bottom: 50px;
         }
 
+        /*Dentro de la tarjeta lateral, modificamos elementos específicos, como la lista no ordenada o el título h2*/
         .tarjeta-lateral ul {
             padding-left: 25px;
             line-height: 2;
@@ -210,6 +225,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             color: #1E3799;
         }
 
+        /*Como el precio lleva un formato especial, lo definimos en este apartado*/
         .tarjeta-lateral .precio {
             text-align: center;
             font-size: medium;
@@ -222,6 +238,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             padding: 5px;
         }
 
+        /*Hacemos lo mismo con el botón, cambiando su diseño*/
         .tarjeta-lateral button {
             display: block;
             margin: 0px auto;
@@ -234,33 +251,34 @@ agregamos la etiqueta <style> a partir de este punto.-->
             padding: 8px 15px;
         }
 
+        /*Una vez editadas las tarjetas laterales, modificamos la tarjeta destacada*/
         .tarjeta-destacada {
             background-color: #1E3799;
-            border-radius: 15px;
+            border-radius: 15px; /*Esta propiedad redondea los bordes del contenedor*/
             margin: 15px;
             border: 2px solid #0C2461;
-            font-size: small;
+            font-size: small; /*Hacemos la fuente más pequeña*/
             margin-top: 20px;
             margin-bottom: 20px;
             color: white;
         }
 
         .tarjeta-destacada h2 {
-            text-align: center;
+            text-align: center; /*Centramos el texto*/
             font-size: medium;
             color: #FA983A;
         }
 
         .tarjeta-destacada ul {
-            padding-left: 25px;
-            line-height: 2;
+            padding-left: 25px; /*Definimos el margen interno izquierdo de la lista no ordenada*/
+            line-height: 2; /*Aumentamos el espaciado entre líneas*/
         }
 
         .tarjeta-destacada .precio {
             text-align: center;
             font-size: medium;
             color: #FA983A;
-            font-weight: bold;
+            font-weight: bold; /*Ponemos la letra en negrita*/
             border: 1px solid #FA983A;
             border-radius: 5px;
             margin: 10px;
@@ -269,7 +287,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
         }
 
         .tarjeta-destacada button {
-            display: block;
+            display: block; /*Para que el botón ocupe todo el ancho posible en una línea independiente*/
             margin: 10px auto;
             padding: 5px;
             background-color: #FA983A;
@@ -282,14 +300,15 @@ agregamos la etiqueta <style> a partir de este punto.-->
         }
 
         .fila-inferior {
-            height: 360px;
-            margin-bottom: 25px;
+            height: 360px; /*Definimos un tamaño específico en píxeles*/
+            margin-bottom: 25px; 
             background-color: #E8ECF8;
             border-radius: 15px;
             margin: 10px;
             border: 2px solid #1E3799;
         }
 
+        /*Podemos modificar dos selectores de clase a la vez, nombrándolos separados por una coma*/
         .columna-doble, .columna-triple{
             background-color: white;
             border-radius: 15px;
@@ -297,16 +316,20 @@ agregamos la etiqueta <style> a partir de este punto.-->
             border: 2px solid #4A69BD;
         }
 
+        /*También podemos modificar elementos específicos dentro de cada selector*/
         .columna-doble h3, .columna-triple h3{
             margin-bottom: 0;
+            margin-top: 3px;
             font-size: small;
         }
         .columna-doble p, .columna-triple p{
+            margin-bottom: 3px;
             margin-top: 0;
             font-size: small;
             color: black;
         }
 
+        /*Definimos el formato de las novedades*/
         .caja-info {
             background-color: #DFF9FB;
             border-radius: 15px;
@@ -316,6 +339,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             padding: 10px;
         }
 
+        /*Añadimos un formato especial para las novedades destacadas*/
         .caja-destacada-mini {
             background-color: #FFF5EA;
             border-radius: 15px;
@@ -325,6 +349,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             padding: 10px;
         }
 
+        /*Definimos el formato que llevará el pie de página*/
         footer {
             margin-bottom: 25px;
             background-color: #1E3799;
@@ -340,22 +365,28 @@ agregamos la etiqueta <style> a partir de este punto.-->
     ║        FLEXBOX        ║
     ╚═══════════════════════╝
     */
+
+    /*Las propiedades Flexbox se pueden incluir en cada selector junto al formato
+    (color, tamaño, márgenes, etc.); sin embargo, he optado por separarlo en
+    nuevos selectores para facilitar su visualización y edición.
+    */
+
         header {
-            display: flex;
+            display: flex; /*Convierte el contenedor en un flexbox*/
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-between; /*Envía un hijo al extremo derecho y otro al extremo izquierdo de la página*/
             align-items: center;
         }
 
         nav ul {
             display: flex;
-            flex-direction: row;
+            flex-direction: row; /*Indica que el flexbox será en filas*/
         }
 
         .fila-planes {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: center; /*Centra el contenido de la fila horizontalmente*/
             align-items: stretch;
         }
 
@@ -363,7 +394,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex-grow: 1;
+            flex-grow: 1; /*Indica el tamaño relativo que tendrá el hijo respecto a otros hijos*/
             width: 0;
         }
 
@@ -371,7 +402,7 @@ agregamos la etiqueta <style> a partir de este punto.-->
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex-grow: 2;
+            flex-grow: 2; /*Hace que el hijo ocupe el doble de espacio respecto a los hijos que tienen grow: 1*/
             width: 0;
         }
 
@@ -379,29 +410,29 @@ agregamos la etiqueta <style> a partir de este punto.-->
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: stretch;
+            align-items: stretch; /*Estira los hijos para que ocupen todo el espacio disponible de la fila*/
         }
 
         .columna-doble {
+            display: flex;
+            flex-direction: column; /*Establece que el flexbox será en horizontal*/
+            justify-content: space-between; /*Envía un hijo al extremo superior y otro al extremo inferior de la página*/
             flex-grow: 1;
             width: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .columna-triple {
-            flex-grow: 1;
-            width: 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-between; /*Al tratarse de 3 elementos, envía uno arriba, otro abajo y el otro al centro*/
+            flex-grow: 1;
+            width: 0;
         }
 
         footer {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: center; /*Centra el contenido horizontalmente al tratarse de una fila*/
             align-items: center;
         }
 
