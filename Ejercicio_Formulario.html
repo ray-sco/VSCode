@@ -1,0 +1,92 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 25                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html> <!--Definimos documento como HTML5-->
+<html lang="es"> <!--Establecemos el lenguaje en español-->
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--En head ponemos los metadatos y título-->
+<head>
+    <meta charset="UTF-8"> <!--Seleccionamos la codificación de caracteres-->
+    <title>Plantilla de Evaluación HTML5 y CSS3</title> <!--Indicamos el título de la web-->
+</head>
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--En body ponemos el contenido que el usuario observará-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <header>
+        <!--Con la etiqueta <nav> creamos un apartado para los enlaces-->
+        <nav>
+            <a href="#introduccion">Introducción</a> <!--Usando la etiqueta <a> creamos un enlace interno-->
+            <a href="#glosario">Glosario</a>
+            <a href="#calificaciones">Calificaciones</a>
+            <a href="#registro">Registro</a>
+        </nav>
+        <h1>Plantilla de Evaluación HTML5 y CSS3</h1> <!--Título principal de la página-->
+    </header>
+    <hr> <!--Agregamos una línea divisoria-->
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <main>
+        <!--Añadimos una primera sección-->
+        <section id="registro">
+            <h2>Formulario de prueba</h2>
+            <!--Con la etiqueta <form> creamos un formulario que se enviará al servidor para ser procesado-->
+            <!--Usamos el método POST para enviar los datos del formulario de manera segura (oculta)-->
+            <form action="procesar_formulario.php" method="post">
+                <!--Con <fieldset> agrupamos los elementos del formulario y con <legend> damos un título al grupo-->
+            <br><br><br><br>
+                <fieldset>
+                    <label for="correo">Correos:</label>
+                    <input type="email" id="correo" multiple>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            <br><br><br><br>
+            </form>
+        </section>
+        </main> <!--Cerramos la parte principal de la web-->
+        <hr>
+        <!--
+    ╔═══════════════════════╗
+    ║        FOOTER         ║
+    ╚═══════════════════════╝
+    -->
+    <footer> <!--Pie de página-->
+    <p>&copy; 2026 Material Docente de Lenguaje de Marcas. Ejercicio de Estructura, Listas y Tablas. Por Raymond Escobar</p>
+    </footer>
+    <!--
+    ╔═══════════════════════╗
+    ║         STYLE         ║
+    ╚═══════════════════════╝
+    -->
+    <!--A partir de este punto añadimos estilos y formatos CSS dentro del HTML con la etiqueta style-->
+    
+    <style>
+        /*Comenzamos por dar un formato general al cuerpo del documento*/
+        #correo {
+            width: 100%;
+        }
+    </style>
+<!--Finalizamos cerrando las etiquetas de Body y HTML-->
+</body>
+</html>

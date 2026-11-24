@@ -1,0 +1,130 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 25                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html> <!--Definimos documento como HTML5-->
+<html lang="es"> <!--Establecemos el lenguaje en español-->
+<!--
+╔═══════════════════════╗
+║         HEAD          ║
+╚═══════════════════════╝
+-->
+<!--En head ponemos los metadatos y título-->
+<head>
+    <meta charset="UTF-8"> <!--Seleccionamos la codificación de caracteres-->
+    <title>Pruebas Flexbox</title> <!--Indicamos el título de la web-->
+</head>
+<!--
+╔═══════════════════════╗
+║         BODY          ║
+╚═══════════════════════╝
+-->
+<!--En body ponemos el contenido que el usuario observará-->
+<body>
+    <!--
+    ╔═══════════════════════╗
+    ║        HEADER         ║
+    ╚═══════════════════════╝
+    -->
+    <header>
+        <!--Con la etiqueta <nav> creamos un apartado para los enlaces-->
+        <h1>Pruebas con Flexbox</h1> <!--Título principal de la página-->
+    </header>
+    <hr> <!--Agregamos una línea divisoria-->
+    <!--
+    ╔═══════════════════════╗
+    ║         MAIN          ║
+    ╚═══════════════════════╝
+    -->
+    <main>
+        <!--Añadimos una primera sección-->
+
+
+        <section id="padre">
+            <p id="hijo1">Hijo 1</p>
+            <p id="hijo2">Hijo 2</p>
+            <p id="hijo3">Hijo 3</p>
+ <!--           <p id="hijo4">Hijo 4</p>
+            <p id="hijo5">Hijo 5</p>-->
+        </section>
+
+
+        </main> <!--Cerramos la parte principal de la web-->
+        <hr>
+        <!--
+    ╔═══════════════════════╗
+    ║        FOOTER         ║
+    ╚═══════════════════════╝
+    -->
+    <footer> <!--Pie de página-->
+    <p>&copy; 2026 RaySco</p>
+    </footer>
+    <!--
+    ╔═══════════════════════╗
+    ║         STYLE         ║
+    ╚═══════════════════════╝
+    -->
+    <!--A partir de este punto añadimos estilos y formatos CSS dentro del HTML con la etiqueta style-->
+    
+    <style>
+        /*Comenzamos por dar un formato general al cuerpo del documento*/
+        
+        #hijo1 {
+            background-color: rgb(245, 239, 220);
+        }
+
+        #hijo2 {
+            background-color: rgb(220, 245, 229);
+        }
+
+        #hijo3 {
+            background-color: rgb(243, 220, 245);
+        }
+        
+        #hijo4 {
+            background-color: rgb(220, 238, 245);
+        }
+        
+        #hijo5 {
+            background-color: rgb(241, 245, 220);
+        }
+
+        #padre{
+            border: 2px black solid;
+            width: 200px;
+            height: 100px;
+        }
+
+        p {
+            border: 2px grey solid;
+            /*margin-top: 0px;
+            margin-bottom: 0px;*/
+        }
+
+        #padre {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+
+        #hijo1 {
+            align-self: flex-start;
+        }
+
+        #hijo2 {
+            align-self: center;
+        }
+        #hijo3 {
+            align-self: flex-end;
+        }
+
+    </style>
+<!--Finalizamos cerrando las etiquetas de Body y HTML-->
+</body>
+</html>
