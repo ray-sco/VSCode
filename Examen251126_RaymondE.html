@@ -23,35 +23,35 @@
                 <h2>Próximos Talleres</h2>
                 <table border="1">
                     <thead>
-                        <th scope="col">Taller</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Aula</th>
-                        <th scope="col">Plazas</th>
+                        <th scope="col" class="col_grande">Taller</th>
+                        <th scope="col" class="col_normal">Fecha</th>
+                        <th scope="col" class="col_normal">Aula</th>
+                        <th scope="col" class="col_normal">Plazas</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Introducción a Git</td>
-                            <td>10/12/2026</td>
-                            <td>Aula 101</td>
-                            <td>Plazas 15</td>
+                            <td class="col_grande">Introducción a Git</td>
+                            <td class="col_normal">10/12/2026</td>
+                            <td class="col_normal">Aula 101</td>
+                            <td class="col_normal">Plazas 15</td>
                         </tr>
                         <tr>
-                            <td>Maquetación Flexbox</td>
-                            <td>12/12/2026</td>
-                            <td>Aula 104</td>
-                            <td>Plazas 12</td>
+                            <td class="col_grande">Maquetación Flexbox</td>
+                            <td class="col_normal">12/12/2026</td>
+                            <td class="col_normal">Aula 104</td>
+                            <td class="col_normal">Plazas 12</td>
                         </tr>
                         <tr>
-                            <td>Consultas SQL</td>
-                            <td>15/12/2026</td>
-                            <td>Aula 202</td>
-                            <td>Plazas 20</td>
+                            <td class="col_grande">Consultas SQL</td>
+                            <td class="col_normal">15/12/2026</td>
+                            <td class="col_normal">Aula 202</td>
+                            <td class="col_normal">Plazas 20</td>
                         </tr>
                         <tr>
-                            <td>Seguridad Web</td>
-                            <td>18/12/2026</td>
-                            <td>Aula 101</td>
-                            <td>Plazas 10</td>
+                            <td class="col_grande">Seguridad Web</td>
+                            <td class="col_normal">18/12/2026</td>
+                            <td class="col_normal">Aula 101</td>
+                            <td class="col_normal">Plazas 10</td>
                         </tr>
                     </tbody>
                 </table>
@@ -65,19 +65,22 @@
                         <label for="correo" required>Correo electrónico:</label><br>
                         <input type="email" id="correo"><br>
                         <label for="taller">Taller elegido:</label><br>
-                        <input type="text" id="taller" list="lista_taller" placeholder="Introducción a Git"><br>
-                        <datalist id="lista_taller">
-                            <option>Introducción a Git</option>
-                            <option>Maquetación Flexbox</option>
-                            <option>Consultas SQL</option>
-                            <option>Seguridad Web</option>
-                        </datalist>
-                        <label for="turno">Turno preferente:</label><br>
-                        <input type="radio" id="turno" name="turno">
-                        <label>Mañana</label>
-                        <input type="radio" id="turno" name="turno">
-                        <label>Tarde</label><br>
-                        <input type="checkbox" id="casilla" required>Acepto las normas del aula<br>
+                        <select id="taller" name="taller"><br>
+                            <option value="git">Introducción a Git</option>
+                            <option value="flexbox">Maquetación Flexbox</option>
+                            <option value="sql">Consultas SQL</option>
+                            <option value="seguridad">Seguridad Web</option>
+                        </select><br>
+                        <label>Turno preferente:</label><br>
+                        <input type="radio" id="turno_manana" name="turno" value="manana">
+                        <label for="turno_manana" class="texto_normal">Mañana</label>
+
+                        <input type="radio" id="turno_tarde" name="turno" value="tarde">
+                        <label for="turno_tarde" class="texto_normal">Tarde</label><br>
+
+                        <input type="checkbox" id="casilla" name="acepta" required>
+                        <label for="casilla" class="texto_normal">Acepto las normas del aula</label><br>
+
                         <button type="submit">Confirmar reserva</button>
                     </fieldset>
                 </form>
@@ -94,10 +97,19 @@
             background-color: #f4f6f9;
         }
 
+        main {
+            margin: 10px;
+        }
+
         header, footer, button, thead {
             background-color: #1b365d;
             color: white;
-            border: 2px solid #e67e22;
+            border: 1px solid #e67e22;
+        }
+
+        h1 {
+            font-size: larger;
+            margin-left: 15px;
         }
 
         ul, a {
@@ -109,35 +121,83 @@
 
         section {
             background-color: white;
+            padding: 10px;
+            border: 1px solid #1b365d;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: large;
+            color: #1b365d;
         }
 
         table {
-            border-collapse: collapse;
-            border: 2px #bdc6d3 solid;
+            border: 1px #bdc6d3 solid;
+            border-collapse: separate;
             color: #1b365d;
+            width: 100%;
+        }
+
+        thead {
+            border: 1px #bdc6d3 solid;
+        }
+
+        th, td {
+            font-size: small;
+            padding: 10px;
+        }
+
+        .col_grande {
+            width: 40%;
+            text-align: left;
+        }
+
+        .col_normal {
+            width: 20%;
+            text-align: center;
         }
         
-        footer {
-            text-align: center;
+        #nombre, #correo, #taller {
+            width: 95%;
+            margin-bottom: 8px;
         }
 
         label {
             font-weight: bold;
+            font-size: small;
             color: #1b365d;
+        }
+
+        #turno_manana, #casilla {
+            margin-bottom: 10px;
+        }
+
+        .texto_normal {
+            font-weight: normal;
+            color: black;
+        }
+
+        button {
+            padding: 10px 15px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: small;
         }
 
         /*FLEXBOX*/
 
         header {
-            display: flex; /*Convierte el contenedor en un flexbox*/
+            display: flex; 
             flex-direction: row;
-            justify-content: space-between; /*Envía un hijo al extremo derecho y otro al extremo izquierdo de la página*/
+            justify-content: space-between;
             align-items: center;
         }
 
         nav ul {
             display: flex;
-            flex-direction: row; /*Indica que el flexbox será en filas*/
+            flex-direction: row;
         }
 
         #contenedor_superior {
@@ -148,6 +208,7 @@
         }
 
         #horarios, #inscripcion {
+            width: 100%;
             flex-grow: 1;
         }
 
