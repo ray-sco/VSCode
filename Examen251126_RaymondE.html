@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>"TechLab DAW"</title>
+</head>
+
+<main>
+    <header>
+        <h1>TechLab DAW — Gestión de Talleres</h1>
+        <nav>
+            <ul>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#inscripcion">Inscripción</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div id="contenedor_superior">
+            <section id="horarios">
+                <h2>Próximos Talleres</h2>
+                <table border="1">
+                    <thead>
+                        <th scope="col">Taller</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Aula</th>
+                        <th scope="col">Plazas</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Introducción a Git</td>
+                            <td>10/12/2026</td>
+                            <td>Aula 101</td>
+                            <td>Plazas 15</td>
+                        </tr>
+                        <tr>
+                            <td>Maquetación Flexbox</td>
+                            <td>12/12/2026</td>
+                            <td>Aula 104</td>
+                            <td>Plazas 12</td>
+                        </tr>
+                        <tr>
+                            <td>Consultas SQL</td>
+                            <td>15/12/2026</td>
+                            <td>Aula 202</td>
+                            <td>Plazas 20</td>
+                        </tr>
+                        <tr>
+                            <td>Seguridad Web</td>
+                            <td>18/12/2026</td>
+                            <td>Aula 101</td>
+                            <td>Plazas 10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="inscripcion">
+                <form method="POST" action="#" >
+                    <h2>Reserva tu Plaza</h2>
+                    <fieldset>
+                        <label for="nombre" required>Nombre completo:</label><br>
+                        <input type="text" id="nombre"><br>
+                        <label for="correo" required>Correo electrónico:</label><br>
+                        <input type="email" id="correo"><br>
+                        <label for="taller">Taller elegido:</label><br>
+                        <input type="text" id="taller" list="lista_taller" placeholder="Introducción a Git"><br>
+                        <datalist id="lista_taller">
+                            <option>Introducción a Git</option>
+                            <option>Maquetación Flexbox</option>
+                            <option>Consultas SQL</option>
+                            <option>Seguridad Web</option>
+                        </datalist>
+                        <label for="turno">Turno preferente:</label><br>
+                        <input type="radio" id="turno" name="turno">
+                        <label>Mañana</label>
+                        <input type="radio" id="turno" name="turno">
+                        <label>Tarde</label><br>
+                        <input type="checkbox" id="casilla" required>Acepto las normas del aula<br>
+                        <button type="submit">Confirmar reserva</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </body>
+    <footer id="contacto">
+        <p>Departamento de Informática — 1º DAW (2026) | Contacto: techlab@centrofp.es</p>
+    </footer>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        header, footer, button, thead {
+            background-color: #1b365d;
+            color: white;
+            border: 2px solid #e67e22;
+        }
+
+        ul, a {
+            text-decoration: none;
+            list-style: none;
+            color: #e67e22;
+            margin: 10px;
+        }
+
+        section {
+            background-color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px #bdc6d3 solid;
+            color: #1b365d;
+        }
+        
+        footer {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            color: #1b365d;
+        }
+
+        /*FLEXBOX*/
+
+        header {
+            display: flex; /*Convierte el contenedor en un flexbox*/
+            flex-direction: row;
+            justify-content: space-between; /*Envía un hijo al extremo derecho y otro al extremo izquierdo de la página*/
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row; /*Indica que el flexbox será en filas*/
+        }
+
+        #contenedor_superior {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        #horarios, #inscripcion {
+            flex-grow: 1;
+        }
+
+    </style>
+</main>
+</html>
