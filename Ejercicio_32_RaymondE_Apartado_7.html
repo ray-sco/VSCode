@@ -1,0 +1,85 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 7: mezcla de tamaño fijo y flexible</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+            width: 25%;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+            flex: 1;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+            flex: 1;
+        }
+
+        /*        PREGUNTAS APARTADO 7        */
+        /*- ¿Cuánto mide A? ¿Y B y C?
+        A mide 150px como se le indicó, B y C, por su parte, miden 225px cada uno.
+        - ¿Cómo se reparte el espacio? ¿Qué se descuenta primero?
+        Primero se descuenta el espacio fijo de A (150px) y el espacio sobrante
+        se divide propocionalmente entre B y C, a razón de 1:1.
+        - Cambia `.b` a `flex` 2. Calcula antes de medir.
+        A sigue mantiene su ancho fijo. De los 450px que sobran, 300px serán para
+        la caja de B y 150px para la caja C, en proporción 2:1
+        - Vuelve a `.b` con `flex` 1 y cambia la anchura de A a 25%. ¿Cuánto miden ahora B y C?
+        El 25% de 600 son 150px asignados a A. Nuevamente B y C se reparten el espacio
+        que sobra en proporción 1:1, es decir, 225px cada uno
+        */
+
+    </style>
+
+</body>
+</html>

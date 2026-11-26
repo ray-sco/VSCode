@@ -1,0 +1,99 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 3: tamaños absolutos que NO caben</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+            width: 400px;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+            width: 200px;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+            width: 200px;
+        }
+
+        /*        PREGUNTAS APARTADO 3A        */
+        /*-¿Se salen las cajas del padre?
+        No, las cajas no exceden el ancho del padre.
+        - ¿Cuánto mide cada una?
+        Cada caja mide ahora 200px.
+        - ¿Es lo que pusiste en el CSS?
+        No, en el CSS está establecido que cada hijo ocupe 300px*/
+
+        /*        PREGUNTAS APARTADO 3B        */
+        /*
+        Añade a todos los hijos: poner el encogimiento (`flex-shrink`) a 0
+        - ¿Qué ocurre ahora? ¿Para qué crees que sirve `flex-shrink`?
+        Con flex-shrink se forza el ancho definido para los hijos,
+        independientemente de la anchura del padre. Esto ha ocasionado que
+        los hijos A y B ocupen todo el ancho del padre y C se salga del contenedor.
+        */
+
+        /*        PREGUNTAS APARTADO 3C        */
+        /*
+        Quita el encogimiento y modifica cada hijo por separado:
+        `a` con anchura 400px, `b` con 200px y `c` con 200px.
+        Calcula antes de medir cuánto crees que medirá cada una.
+        Creo que se encojerán proporcionalmente al tamaño deseado.
+        - ¿Se encogen por igual?
+        No, en este caso, al tratarse de una proporción 2:1:1,
+        el hijo A se expandió la mitad del ancho del padre (300px)
+        mientras que B y C se expandieron una cuarta parte cada uno (150px)
+        */
+    </style>
+
+</body>
+</html>

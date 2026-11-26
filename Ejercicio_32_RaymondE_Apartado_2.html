@@ -1,0 +1,92 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 2: tamaños absolutos que caben</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+            width: 100px;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+        }
+
+        /*        PREGUNTAS APARTADO 2A        */
+        /*- ¿Cuánto suman las tres cajas?
+        La suma del ancho de los 3 hijos es de 300 px
+        - ¿Cuánto espacio sobra en el padre?
+        Sobran 300px de espacio vacío en el padre
+        - ¿En qué lado queda el espacio libre?
+        El espacio libre queda a la derecha.
+        - Cambia la anchura de los hijos a 150px. ¿Qué cambia?
+        Ahora el ancho aumenta, sumando 450px y quedando 150px
+        de espacio libre en el padre*/
+
+
+        /*        PREGUNTAS APARTADO 2B        */
+        /*- ¿Dónde está ahora el espacio libre? ¿Cuánto hay a cada lado?
+        Tras centrar las cajas de los hijos, el espacio libre ahora se encuentra
+        a cada lado del padre. En cada lado hay 150px libres.
+        - Prueba con `flex-end`, `space-between` y `space-around`.
+        ¿Qué diferencia hay entre ellos?
+        Flex-end posiciona a los tres hijos al final de la fila (al extremo derecho)
+        Space-between pega al hijo A a la izquierda, B en el centro y C a la derecha.
+        Anota cuál es el valor por defecto (el que había antes de añadir nada).
+        El valor por defecto es flex-start*/
+
+    </style>
+
+</body>
+</html>

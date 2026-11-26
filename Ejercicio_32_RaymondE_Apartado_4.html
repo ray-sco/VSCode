@@ -1,0 +1,89 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 4: tamaños relativos (porcentajes)</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+            width: 20%;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+            width: 30%;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+            width: 50%;
+        }
+
+        /*        PREGUNTAS APARTADO 4        */
+        /*- ¿Cuánto mide cada caja en píxeles? ¿Coincide con tu cálculo a mano?
+        La caja A mide 120px, la B 180px y la C 300px. Sí, coincide con mi cálculo.
+        - ¿Respecto a qué elemento se calcula el porcentaje?
+        Se calcula respecto a los 600px de anchura del padre.
+        - Cambia las anchuras a 20%, 20% y 20%. ¿Cuánto espacio sobra?
+        Sobra el 40% del ancho, es decir, 240px.
+        - Cambia las anchuras a 50%, 50% y 50%. ¿Se desbordan? ¿Cuánto mide cada una?
+        A pesar de sumar 150% del ancho del padre, las cajas no se desbordan,
+        cada una mide 200px de ancho.
+        - Vuelve a 20%, 30% y 50%. Modifica en el padre la anchura a 800px.
+        ¿Qué pasa con las medidas de las cajas? Compara con lo que pasaba con los píxeles en el Apartado 2
+        Las medidas se ajustan de forma proporcional al nuevo ancho del padre,
+        Ahora el hijo A mide 160px, el B 240px y el C 400px. Comparado con lo que sucede en la caja 2
+        donde los tamaños eran fijos, en este apartado tenemos tamaños que se ajustan al ancho del contenedor,
+        por lo que son relativos y sirven para ajustarse a distintas resoluciones de pantalla.
+        */
+
+    </style>
+
+</body>
+</html>

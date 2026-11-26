@@ -1,0 +1,85 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 6: apartado proporcional</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+            flex: 1;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+            flex: 2;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+            flex: 3;
+        }
+
+        /*        PREGUNTAS APARTADO 6        */
+        /*- ¿Cuántas "partes" hay en total? ¿Cuánto vale cada parte en píxeles?
+        Hay un total de 3 partes. Los hijos A y C valen 1 (25% cada uno)
+        y el hijo B vale 2 (50% del ancho del padre). 
+        - ¿Cuánto mide cada caja? Comprueba que A mide la mitad que B.
+        Las cajas A y C miden 150px cada una y el hijo B mide 300px, siendo el doble que A.
+        - Cambia a `flex` 1, 2 y 3. Calcula antes de medir.
+        Ahora A mide 100px, B mide 200px y C mide 300px.
+        - ¿Qué diferencia hay entre poner `flex: 2` y poner una anchura de 2px?
+        Al indicar `flex: 2` nos referimos a un valor proporcional del hijo respecto
+        al valor de los otros hijos. En cambio, al establecer 2px, nos referimos a
+        los píxeles, que representa un tamaño fijo.
+        */
+
+    </style>
+
+</body>
+</html>

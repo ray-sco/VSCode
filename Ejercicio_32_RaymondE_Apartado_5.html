@@ -1,0 +1,81 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 5: todos del mismo ancho con 'flex: 1'</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B con frase larga</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+        }
+
+        /*        PREGUNTAS APARTADO 5        */
+        /*- ¿Cuánto mide cada caja?
+        Cada caja mide 200px de ancho.
+        ¿Cómo has llegado a ese número?
+        Utilizando el inspector de código del navegador.
+        - Escribe en la caja B: “B con frase larga”.
+        ¿Sigue siendo igual de ancha que A y C?
+        Sí, sigue siendo igual de ancha que A y C.
+        - ¿Sobra espacio en el padre?
+        No, el espacio ha sido ocupado en su totalidad.
+        */
+
+    </style>
+
+</body>
+</html>

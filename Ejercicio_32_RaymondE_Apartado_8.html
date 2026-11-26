@@ -1,0 +1,87 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 8: final</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>
+            <div id="hijo_d" class="hijo">
+                <p>D</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+            width: 100px;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+            width: 25%;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+            flex: 1;
+        }
+
+       #hijo_d {
+            background-color: #e0d42c;
+            flex: 1;
+        }
+
+        /*        PREGUNTAS APARTADO 7        */
+        /*- ¿Cuánto mide cada caja?. Respuesta razonada.
+        La caja A mide 100px, de acuerdo al tamaño fijo que le
+        hemos asignado. La caja B mide 150px, que se corresponde 
+        al 25% del ancho del contenedor padre. El espacio restante
+        (350px) se divide proporcionalmente entre los hijos C y D,
+        correspondiendo 175px a cada uno de ellos*/
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║ EJERCICIO 32                                                             ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║ Alumno:    Raymond J. Escobar Gallego                                    ║
+║ Profesor:  Secundino González Cubo                                       ║
+║ Módulo:    Lenguajes de marcas y sistemas de gestión de la información   ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 32 - Raymond J. Escobar G.</title>
+</head>
+<body>
+    <main>
+        <h1>Flexbox: reparto de espacios (flex-direction: row)</h1>
+        <h2>Apartado 1: hijos sin tamaño</h2>
+        <div id="padre">
+            <div id="hijo_a" class="hijo">
+                <p>A</p>
+            </div>
+            <div id="hijo_b" class="hijo">
+                <p>B ahora es una frase</p>
+            </div>
+            <div id="hijo_c" class="hijo">
+                <p>C</p>
+            </div>   
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <style>
+        #padre {
+            width: 600px;
+            height: 80px;
+            outline: 3px solid #333333;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .hijo {
+            color: white;
+            font-weight: bold;
+        }
+
+        #hijo_a {
+            background-color: #e74c3c;
+        }
+
+        #hijo_b {
+            background-color: #27ae60;
+        }
+
+        #hijo_c {
+            background-color: #2980b9;
+        }
+
+        /*        PREGUNTAS APARTADO 1        */
+        /*- ¿Ocupan las tres cajas todo el ancho del padre?
+        No, cada caja ocupa el espacio mínimo, dejando el resto del espacio sin rellenar.
+        - Cambia el texto de B por una frase larga. ¿Qué le pasa al ancho de B? ¿Y al de A y C?
+        El ancho de B se amplía, ajustándose para mostrar su contenido. A y C permanencen igual
+        - ¿En qué lado del padre queda el espacio libre?
+        En el padre queda libre el espacio de la derecha, ya que usamos la propiedad flex-start
+        que agrupa a los hijos al inicio (izquierda) de la fila*/
+
+    </style>
+
+</body>
+</html>
